@@ -1,0 +1,9 @@
+En el bin\Debug el archivo Conexion.txt es necesario
+agregar los datos del servidor (IP,BD,USER,PASS) en cada linea en ese orden
+
+los sql son necesario ejecutarlos, solo verificar 
+cambiar la BD en cada uno de ellos
+
+El sistema inicia con un menu, pero hay que dar de alta
+un empleado y un inventario para poder 
+trabajar con el proceso de polizas

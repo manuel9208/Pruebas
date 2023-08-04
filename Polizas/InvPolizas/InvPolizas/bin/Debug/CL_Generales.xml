@@ -1,0 +1,2848 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>CL_Generales</name>
+    </assembly>
+    <members>
+        <member name="T:CL_Generales.CL_AccesoDatos.CL_Datos">
+            <summary>
+            Clase de CL_Datos
+            </summary>
+        </member>
+        <member name="M:CL_Generales.CL_AccesoDatos.CL_Datos.EjecutarConsulta(System.String,System.Data.DataSet@)">
+            <summary>
+            Método para ejecutar una consulta de SQL
+            </summary>
+            <param name="sConsulta">Consulta de SQL</param>
+            <param name="oDs">Retorna el DataSet con la información de la consulta</param>
+        </member>
+        <member name="M:CL_Generales.CL_AccesoDatos.CL_Datos.EjecutarConsulta(System.String)">
+            <summary>
+            Método para ejecutar una consulta de SQL
+            </summary>
+            <param name="sConsulta">Consulta de SQL</param>
+            <returns></returns>
+        </member>
+        <member name="M:CL_Generales.CL_AccesoDatos.CL_Datos.EjecutarConsultaImagen(System.String,System.String)">
+            <summary>
+            Método para guardar la imagen en la tabla productos
+            </summary>
+            <param name="sCodProducto">Código del producto</param>
+            <param name="sRuta">Ruta donde se encuentra la imagen</param>
+            <returns></returns>
+        </member>
+        <member name="M:CL_Generales.CL_AccesoDatos.CL_Datos.ObtenerDatosConexion(System.Int32)">
+            <summary>
+            Método para obtener los datos del servidor-basedatos que se quiere conectar 
+            </summary>
+            <param name="iIdConexion">Número de conexión</param>
+        </member>
+        <member name="M:CL_Generales.CL_AccesoDatos.CL_Datos.WebEncriptar(System.String)">
+            <summary>
+             Método para encriptar dato tipo string
+            </summary>
+            <param name="sDato">Cadena que se quiere encriptar</param>
+            <returns></returns>
+        </member>
+        <member name="M:CL_Generales.CL_AccesoDatos.CL_Datos.WebDesEncriptar(System.String)">
+            <summary>
+            Método para desencriptar dato tipo string
+            </summary>
+            <param name="sDato">Cadena que se quiere desencriptar</param>
+            <returns></returns>
+        </member>
+        <member name="M:CL_Generales.CL_AccesoDatos.CL_Datos.Desencriptar(System.String)">
+            <summary>
+            Método para desencriptar
+            </summary>
+            <param name="_CadenaStr"></param>
+            <returns></returns>
+        </member>
+        <member name="M:CL_Generales.CL_AccesoDatos.CL_Datos.Encriptar(System.String)">
+            <summary>
+            Método para encritaptar
+            </summary>
+            <param name="_CadenaStr"></param>
+            <returns></returns>
+        </member>
+        <member name="T:CL_Generales.CL_Conexion.CL_Conexiones">
+            <summary>
+            Clase de Conexiones
+            </summary>
+        </member>
+        <member name="F:CL_Generales.CL_Conexion.CL_Conexiones.sServidor">
+            <summary>
+            Variable de la direeción del servidor
+            </summary>
+        </member>
+        <member name="F:CL_Generales.CL_Conexion.CL_Conexiones.sBaseDatos">
+            <summary>
+            Variable de nombre de la base de datos
+            </summary>
+        </member>
+        <member name="F:CL_Generales.CL_Conexion.CL_Conexiones.sUsuario">
+            <summary>
+            Variable de nombre de usuario
+            </summary>
+        </member>
+        <member name="F:CL_Generales.CL_Conexion.CL_Conexiones.sContrasena">
+            <summary>
+            Variable de la contraseña de usuario
+            </summary>
+        </member>
+        <member name="F:CL_Generales.CL_Conexion.CL_Conexiones.oConexion">
+            <summary>
+            Variable para la conexión
+            </summary>
+        </member>
+        <member name="F:CL_Generales.CL_Conexion.CL_Conexiones.oConsulta">
+            <summary>
+            Variable de comando
+            </summary>
+        </member>
+        <member name="F:CL_Generales.CL_Conexion.CL_Conexiones.oTransaccion">
+            <summary>
+            Variable de transacción
+            </summary>
+        </member>
+        <member name="F:CL_Generales.CL_Conexion.CL_Conexiones._iIdConexion">
+            <summary>
+            Variable _iIdConexion
+            </summary>
+        </member>
+        <member name="P:CL_Generales.CL_Conexion.CL_Conexiones.IdDeConexion">
+            <summary>
+            Variable IdDeConexion
+            </summary>
+        </member>
+        <member name="P:CL_Generales.CL_Conexion.CL_Conexiones.Servidor">
+            <summary>
+            Variable servidor
+            </summary>
+        </member>
+        <member name="P:CL_Generales.CL_Conexion.CL_Conexiones.BaseDatos">
+            <summary>
+            Variable base de datos
+            </summary>
+        </member>
+        <member name="P:CL_Generales.CL_Conexion.CL_Conexiones.Usuario">
+            <summary>
+            Variable usuario
+            </summary>
+        </member>
+        <member name="P:CL_Generales.CL_Conexion.CL_Conexiones.Contrasena">
+            <summary>
+            Variable contraseña
+            </summary>
+        </member>
+        <member name="M:CL_Generales.CL_Conexion.CL_Conexiones.LeerDatosConexion">
+            <summary>
+            Obtener los datos de conexión del archivo delcampo.txt
+            </summary>
+        </member>
+        <member name="M:CL_Generales.CL_Conexion.CL_Conexiones.AbrirConexion">
+            <summary>
+            Método para abrir la conexión a SQL
+            </summary>
+            <returns>Retorna verdadero si la conexion se abre correctamente</returns>
+        </member>
+        <member name="M:CL_Generales.CL_Conexion.CL_Conexiones.CerrarConexion">
+            <summary>
+            Método para cerrar conexion a SQL
+            </summary>
+            <returns>Retorna verdadero si la conexion se abre correctamente</returns>
+        </member>
+        <member name="T:CL_Generales.CL_Control.CL_Controles">
+            <summary>
+            Clase CL_Controles
+            </summary>
+        </member>
+        <member name="M:CL_Generales.CL_Control.CL_Controles.SoloNumero(System.Windows.Forms.KeyPressEventArgs)">
+            <summary>
+            Método para permitir capturar solo numero, Nota: Solo se puede usar en el evento KeyPress del control
+            </summary>
+            <param name="e">Recibe la variable del evento KeyPressEventArgs (e)</param>
+        </member>
+        <member name="M:CL_Generales.CL_Control.CL_Controles.SoloNumerosDecimales(System.Windows.Forms.KeyPressEventArgs)">
+            <summary>
+            Método para permitir capturar solo numeros y decimales, Nota: Solo se puede usar en el evento KeyPress del control
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="M:CL_Generales.CL_Control.CL_Controles.SoloCaracteres(System.Windows.Forms.KeyPressEventArgs)">
+            <summary>
+            Método para permitir capturar solo caracteres, Nota:Solo se puede usar en el evento KeyPress del control
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="M:CL_Generales.CL_Control.CL_Controles.SoloCaracteresNumeros(System.Windows.Forms.KeyPressEventArgs)">
+            <summary>
+            Método para permitir capturara solo caracteres y números, Nota: Solo se puede usar en el evento KeyPress del control
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="M:CL_Generales.CL_Control.CL_Controles.AgregarCerosIzqDer(System.String,System.Int32,System.String)">
+            <summary>
+            Método para agregar ceros a la izquierda o derecha a una cadena
+            </summary>
+            <param name="sCadena">Cadena a la que se le desea agregar ceros</param>
+            <param name="iLongitudMax">La medida (length) que debe de tener la cadena que quiere que regrese</param>
+            <param name="sLado">Lado a donde se van agregar los ceros. "I" - Izquierda o "D" - Derecha</param>
+            <returns>Retorna la cadena con los ceros agregados</returns>
+        </member>
+        <member name="M:CL_Generales.CL_Control.CL_Controles.MascaraRfc(System.Windows.Forms.MaskedTextBox)">
+            <summary>
+            Método para asignarle mascara de RFC al control
+            </summary>
+            <param name="oMtxt">Control que se le quiere agregar la mascara</param>
+        </member>
+        <member name="M:CL_Generales.CL_Control.CL_Controles.MascaraTel(System.Windows.Forms.MaskedTextBox)">
+            <summary>
+            Método para asignarle mascara de Teléfono al control
+            </summary>
+            <param name="oMtxt"></param>
+        </member>
+        <member name="M:CL_Generales.CL_Control.CL_Controles.EstiloFormulario(System.Windows.Forms.Form,System.Boolean,System.Boolean,System.Boolean,System.Boolean)">
+            <summary>
+            Método para modificar el estilo de los controles de los formularios
+            </summary>
+            <param name="oFrm">Formulario que se le aplica el cambio de estilo</param>
+            <param name="bAplica">Si aplica cambios de estilo. True - Aplica estilos, False - No aplica estilos</param>
+            <param name="bLabelEncabezado">Aplicarles cambios a los encabezados label (Es necesario primero agregar "_" al nombre del label)</param>
+            <param name="bTextBox">Aplica cambios de propiedades y estilo a los textbox</param>    
+            <param name="bAlinear"></param>        
+        </member>
+        <member name="M:CL_Generales.CL_Control.CL_Controles.EstiloFormulario(System.Windows.Forms.Control,System.Boolean,System.Boolean,System.Boolean,System.Boolean)">
+            <summary>
+            Método para modificar el estilo de los controles de los formularios
+            </summary>
+            <param name="oControl">Control que se le aplica el cambio de estilo</param>
+            <param name="bAplica">Si aplica cambios de estilo. True - Aplica estilos, False - No aplica estilos</param>
+            <param name="bLabelEncabezado">Aplicarles cambios a los encabezados label (Es necesario primero agregar "_" al nombre del label)</param>
+            <param name="bTextBox">Aplica cambios de propiedades y estilo a los textbox</param>    
+            <param name="bAlinear"></param>      
+        </member>
+        <member name="M:CL_Generales.CL_Control.CL_Controles.MensajeProcesoBasico(System.Action)">
+            <summary>
+            Método para mostrar el mensaje basico
+            </summary>
+            <param name="_MetodoEjecutar"></param>
+            <returns></returns>
+        </member>
+        <member name="M:CL_Generales.CL_Control.CL_Controles.DataTableToListGenerica(System.Data.DataTable)">
+            <summary>
+            Método para convertir DataTable en Lista generica
+            </summary>
+            <param name="_dtTabla">DataTable que se quiere convertir a lista generica</param>
+            <returns></returns>
+        </member>
+        <member name="F:CL_Generales.CL_Control.MsjBasico.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:CL_Generales.CL_Control.MsjBasico.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:CL_Generales.CL_Control.MsjBasico.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="F:CL_Generales.CL_Control.MsjDefault.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:CL_Generales.CL_Control.MsjDefault.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:CL_Generales.CL_Control.MsjDefault.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="F:CL_Generales.CL_Control.MsjNormal.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:CL_Generales.CL_Control.MsjNormal.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:CL_Generales.CL_Control.MsjNormal.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="T:CL_Generales.CL_Excel._ArchivoXlsGeneral">
+            <summary>
+            Clase _ArchivoXlsGeneral
+            </summary>
+        </member>
+        <member name="F:CL_Generales.CL_Excel._ArchivoXlsGeneral._RutaDefaultXLS">
+            <summary>
+            Variable de la Ruta default para el excel
+            </summary>
+        </member>
+        <member name="P:CL_Generales.CL_Excel._ArchivoXlsGeneral.RutaDefaulXLS">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:CL_Generales.CL_Excel._ArchivoXlsGeneral._RutaDefaultPDF">
+            <summary>
+            Variable de la Ruta default PDF
+            </summary>
+        </member>
+        <member name="P:CL_Generales.CL_Excel._ArchivoXlsGeneral.RutaDefaulPDF">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:CL_Generales.CL_Excel._ArchivoXlsGeneral.#ctor(System.String)">
+            <summary>
+            Constructor del excel
+            </summary>
+            <param name="sTipo">Tipo de excel "XLSX" o "XLS"</param>
+        </member>
+        <member name="M:CL_Generales.CL_Excel._ArchivoXlsGeneral.ObtenerRegistrosExcel(System.String,System.String)">
+            <summary>
+            Método para obtener los registros de un excel
+            </summary>
+            <param name="_RutaExcel">Ruta del excel</param>
+            <param name="_HojaName">Nombre de la hoja</param>
+            <returns>Retorna la lista con la información</returns>
+        </member>
+        <member name="M:CL_Generales.CL_Excel._ArchivoXlsGeneral.DataTableToListGenerica(System.Data.DataTable)">
+            <summary>
+            Método para convertir DataTable en List
+            </summary>
+            <param name="_dtTabla">Tabla que se quiere convertir</param>
+            <returns>Retorna la lista con la información correspondiente</returns>
+        </member>
+        <member name="M:CL_Generales.CL_Excel._ArchivoXlsGeneral.#ctor(System.String,System.Boolean)">
+            <summary>
+            Constructor _ArchivoXlsGeneral
+            </summary>
+            <param name="_RutaArchivoXls">Ruta del archivo</param>
+            <param name="_AppVisible">True - Si el archivo podra ser visto mientras se genera, False - Permanece oculto mientras se genera</param>
+        </member>
+        <member name="M:CL_Generales.CL_Excel._ArchivoXlsGeneral.FormatoFechaCeldaMMDDYYYY(System.String,System.String,System.String)">
+            <summary>
+            Método para darle formato a la celda  por mes-dia-año
+            </summary>
+            <param name="_HojaXls">Nombre de la hoja</param>
+            <param name="_CeldaStart">Celda inicia el formato</param>
+            <param name="_CeldaEnd">Celda final del formato</param>
+        </member>
+        <member name="M:CL_Generales.CL_Excel._ArchivoXlsGeneral.FormatoFechaCeldaDDMMYYYY(System.String,System.String,System.String)">
+            <summary>
+            Método para darle formato a la celda por dia-mes-año
+            </summary>
+            <param name="_HojaXls">Nombre de la hoja</param>
+            <param name="_CeldaStart">Celda inicia el formato</param>
+            <param name="_CeldaEnd">Celda final del formato</param>
+        </member>
+        <member name="M:CL_Generales.CL_Excel._ArchivoXlsGeneral.ObtenerDatoCelda(System.String)">
+            <summary>
+            Método para obtener el valor de una celda en especifica
+            </summary>
+            <param name="_ColName">Celda especifica</param>
+            <returns></returns>
+        </member>
+        <member name="M:CL_Generales.CL_Excel._ArchivoXlsGeneral.ObtenerListaHoja(System.Int32)">
+            <summary>
+            Método para obtener la información de la hoja
+            </summary>
+            <param name="_RowInicial">Renglón apartir de donde se tomara la información</param>
+            <returns></returns>
+        </member>
+        <member name="M:CL_Generales.CL_Excel._ArchivoXlsGeneral.UnirCeldas(System.String,System.String,System.String)">
+            <summary>
+            Método para unir celdas
+            </summary>
+            <param name="_HojaName">Nombre de la hoja</param>
+            <param name="_CeldaStart">Celda inicial para unir</param>
+            <param name="_CeldaEnd">Celda final par unir</param>
+        </member>
+        <member name="M:CL_Generales.CL_Excel._ArchivoXlsGeneral.CrearLibroXls(System.String,System.Boolean)">
+            <summary>
+            Método para crear un libro de excel
+            </summary>
+            <param name="_NameHojaInicial">Nombre de la hoja</param>
+            <param name="_LibroVisible">True - Si se quiere mirar el documento mientras se crea, False - Para tener el documento de forma oculta</param>
+        </member>
+        <member name="M:CL_Generales.CL_Excel._ArchivoXlsGeneral.AgregaHoja(System.String)">
+            <summary>
+            Método para agregarle hojas al libro
+            </summary>
+            <param name="sheetName">Nombre de la hoja</param>
+        </member>
+        <member name="M:CL_Generales.CL_Excel._ArchivoXlsGeneral.EscribirCelda(System.String,System.String,System.String,System.Object[])">
+            <summary>
+            Método para escribir en la celda
+            </summary>
+            <param name="sheetName">Nombre de la hoja</param>
+            <param name="_Celda">Coordenada de la celda</param>
+            <param name="text">Dato que se quiere poner a la celda</param>
+        </member>
+        <member name="M:CL_Generales.CL_Excel._ArchivoXlsGeneral.FormatoNumeroCelda(System.String,System.String,System.String,System.Int32)">
+            <summary>
+            Método para darle formato a un rango de celdas
+            </summary>
+            <param name="_HojaXls">Hoja del libro de excel</param>
+            <param name="_CeldaStart">Celda inicial que se le quiere dar formato</param>
+            <param name="_CeldaEnd">Celda final que se le quiere dar formato</param>
+            <param name="_NumeroDigitos">Número de digitos que quieres que sea la celda</param>
+        </member>
+        <member name="M:CL_Generales.CL_Excel._ArchivoXlsGeneral.FormatoTextoCelda(System.String,System.String,System.String)">
+            <summary>
+            Método para darle formato de texto a un rango de celdas
+            </summary>
+            <param name="_HojaXls">Nombre de la hoja de excel</param>
+            <param name="_CeldaStart">Celda inicial que se le quiere dar formato</param>
+            <param name="_CeldaEnd">Celda final que se le quiere dar formato</param>
+        </member>
+        <member name="M:CL_Generales.CL_Excel._ArchivoXlsGeneral.FormatoFechaCelda(System.String,System.String,System.String)">
+            <summary>
+            Método para darle formato de fecha a la celda
+            </summary>
+            <param name="_HojaXls">Nombre de la hoja</param>
+            <param name="_CeldaStart">Coordenada de la celda inicial</param>
+            <param name="_CeldaEnd">Coordinada de la celda final</param>
+        </member>
+        <member name="M:CL_Generales.CL_Excel._ArchivoXlsGeneral.FormatoMonedaCelda(System.String,System.String,System.String)">
+            <summary>
+            Método para darle formato de moneda (decimales con punto) a la celda
+            </summary>
+            <param name="_HojaXls">Nombre de la hoja</param>
+            <param name="_CeldaStart">Coordenada inicial de la celda</param>
+            <param name="_CeldaEnd">Coordenada final de la celda</param>
+        </member>
+        <member name="M:CL_Generales.CL_Excel._ArchivoXlsGeneral.FormatoMonedaCeldaGlobal(System.String,System.String,System.String)">
+            <summary>
+            Método para darle formato de moneda (decimales con coma) a la celda
+            </summary>
+            <param name="_HojaXls">Nombre de la hoja</param>
+            <param name="_CeldaStart">Coordenada de la celda inicial</param>
+            <param name="_CeldaEnd">Coordenada de la celda final</param>
+        </member>
+        <member name="M:CL_Generales.CL_Excel._ArchivoXlsGeneral.FormatoNegativoMonedaCeldaGlobal(System.String,System.String,System.String)">
+            <summary>
+            Método para darle formato de negativo a la moneda (decimales con coma)
+            </summary>
+            <param name="_HojaXls">Nombre de la hoja</param>
+            <param name="_CeldaStart">Coordenada de la celda inicial</param>
+            <param name="_CeldaEnd">Coordenada de la celda final</param>
+        </member>
+        <member name="M:CL_Generales.CL_Excel._ArchivoXlsGeneral.FormatoNegativoMonedaCelda(System.String,System.String,System.String)">
+            <summary>
+            Método para darle formato de negativo a la moneda (decimal con punto)
+            </summary>
+            <param name="_HojaXls">Nombre de la hoja</param>
+            <param name="_CeldaStart">Coordenada de la celda inicial</param>
+            <param name="_CeldaEnd">Coordenada de la celda final</param>
+        </member>
+        <member name="M:CL_Generales.CL_Excel._ArchivoXlsGeneral.AsignarFuenteExcel(System.String,System.String,System.String)">
+            <summary>
+            Método para asignar fuentes al excel
+            </summary>
+            <param name="_RutaXls">Ruta del excel</param>
+            <param name="_NameFuente">Nombre de la fuente</param>
+            <param name="_NombreHoja">Nombre de la hoja</param>
+        </member>
+        <member name="M:CL_Generales.CL_Excel._ArchivoXlsGeneral.AsignarFuenteExcel(System.String,System.String,System.String,System.String)">
+            <summary>
+            Método para asignar la fuente a una hoja en especifica y celdas
+            </summary>
+            <param name="_HojaName">Nombre de la hoja</param>
+            <param name="_NameFuente">Nombre del fuente</param>
+            <param name="_CeldaStart">Coordenada de la celda inicial</param>
+            <param name="_CeldaEnd">Coordenada de la celda final</param>
+        </member>
+        <member name="M:CL_Generales.CL_Excel._ArchivoXlsGeneral.AsignarFuenteExcel(System.String,System.String)">
+            <summary>
+            Método para asignarle fuente a excel
+            </summary>
+            <param name="_RutaXls">Ruta del excel</param>
+            <param name="_NameFuente">Nombre del fuente</param>
+        </member>
+        <member name="M:CL_Generales.CL_Excel._ArchivoXlsGeneral.AlignLeftCeldas(System.String,System.String,System.String)">
+            <summary>
+            Método para alinear celdas a la izquierda
+            </summary>
+            <param name="_ColNameStart">Coordenada de la celda inicial</param>
+            <param name="_ColNameEnd">Coordenada de la celda final</param>
+            <param name="_NombreHoja">Nombre de la hoja</param>
+        </member>
+        <member name="M:CL_Generales.CL_Excel._ArchivoXlsGeneral.AlignLeftCeldas(System.String,System.String)">
+            <summary>
+            Método para alinear celdas a la izquierda
+            </summary>
+            <param name="_ColNameStart">Coordenada de la celda inicial</param>
+            <param name="_ColNameEnd">Coordenada de la celda final</param>
+        </member>
+        <member name="M:CL_Generales.CL_Excel._ArchivoXlsGeneral.AlignRighCeldas(System.String,System.String,System.String)">
+            <summary>
+            Método para alinear celdas a la derecha
+            </summary>
+            <param name="_ColNameStart">Coordenada de la celda inicial</param>
+            <param name="_ColNameEnd">Coordenada de la celda final</param>
+            <param name="_NombreHoja">Nombre de la hoja</param>
+        </member>
+        <member name="M:CL_Generales.CL_Excel._ArchivoXlsGeneral.AlignRighCeldas(System.String,System.String)">
+            <summary>
+            Método para alinear celdas a la derecha
+            </summary>
+            <param name="_ColNameStart">Coordenada de la celda inicial</param>
+            <param name="_ColNameEnd">Coordenada de la celda final</param>
+        </member>
+        <member name="M:CL_Generales.CL_Excel._ArchivoXlsGeneral.AlignCenterCeldas(System.String,System.String,System.String)">
+            <summary>
+            Método para alinear celdas al centro
+            </summary>
+            <param name="_ColNameStart">Coordenada de la celda inicial</param>
+            <param name="_ColNameEnd">Coordenada de la celda final</param>
+            <param name="_NombreHoja">Nombre de la hoja</param>
+        </member>
+        <member name="M:CL_Generales.CL_Excel._ArchivoXlsGeneral.AlignCenterCeldas(System.String,System.String)">
+            <summary>
+            Método para alinear la celdas al centro
+            </summary>
+            <param name="_ColNameStart">Coordenada de la celda inicial</param>
+            <param name="_ColNameEnd">Coordenada de la celda final</param>
+        </member>
+        <member name="M:CL_Generales.CL_Excel._ArchivoXlsGeneral.AjustarTamanioCelda(System.String,System.String,System.Int32)">
+            <summary>
+            Método para ajustar el tamaño de la celda
+            </summary>
+            <param name="_NombreHoja">Nombre de la hoja</param>
+            <param name="_NameCelda">Coordenada de la celda</param>
+            <param name="_TamanioCelda">Tamaño de la celda</param>
+        </member>
+        <member name="M:CL_Generales.CL_Excel._ArchivoXlsGeneral.BorderCeldas(System.String,System.String,System.String)">
+            <summary>
+            Método para los bordes de la celdas
+            </summary>
+            <param name="_ColNameStart">Coordenada de la celda inicial</param>
+            <param name="_ColNameEnd">Coordenada de la celda final</param>
+            <param name="_NombreHoja">Nombre de la hoja</param>
+        </member>
+        <member name="M:CL_Generales.CL_Excel._ArchivoXlsGeneral.BorderCeldas(System.String,System.String)">
+            <summary>
+            Método para los bordes de la celdas
+            </summary>
+            <param name="_ColNameStart">Coordenada de la celda inicial</param>
+            <param name="_ColNameEnd">Coordenada de la celda final</param>
+        </member>
+        <member name="M:CL_Generales.CL_Excel._ArchivoXlsGeneral.AjustarColumnas(System.String,System.String,System.String)">
+            <summary>
+            Método para ajustar las columnas de la hoja
+            </summary>
+            <param name="_ColNameStart">Coordenada inicial de la celda</param>
+            <param name="_ColNameEnd">Coordenada final de la celda</param>
+            <param name="_NombreHoja">Nombre de la hoja</param>
+        </member>
+        <member name="M:CL_Generales.CL_Excel._ArchivoXlsGeneral.ColorFondoCelda(System.String,System.String,System.Drawing.Color,System.String)">
+            <summary>
+            Método para colorear el fondo de la celda
+            </summary>
+            <param name="_ColNameStart">Coordenada inicial de la celda</param>
+            <param name="_ColNameEnd">Coordenada final de la celda</param>
+            <param name="_ColorFondo">Color que desea pintar el fondo de la celda</param>
+            <param name="_NombreHoja">Nombre de la hoja</param>
+        </member>
+        <member name="M:CL_Generales.CL_Excel._ArchivoXlsGeneral.ColorFuente(System.String,System.String,System.Drawing.Color,System.String)">
+            <summary>
+            Método para cambiar el color de fuente
+            </summary>
+            <param name="_ColNameStart">Coordenada inicial de la celda</param>
+            <param name="_ColNameEnd">Coordenada final de la celda</param>
+            <param name="_ColorFont">Color que se desea pintar la letra de la celda</param>
+            <param name="_NombreHoja">Nombre de la hoja</param>
+        </member>
+        <member name="M:CL_Generales.CL_Excel._ArchivoXlsGeneral.ColorFuente(System.String,System.String,System.Drawing.Color)">
+            <summary>
+            Método para cambiar el color de fuente
+            </summary>
+            <param name="_ColNameStart">Coordenada inicial de la celda</param>
+            <param name="_ColNameEnd">Coordenada final de la celda</param>
+            <param name="_ColorFont">Color que se desea pintar la letra de la celda</param>
+        </member>
+        <member name="M:CL_Generales.CL_Excel._ArchivoXlsGeneral.FuenteNegrita(System.String,System.String,System.String)">
+            <summary>
+            Método para cambiar fuente en negrita
+            </summary>
+            <param name="_ColNameStart">Coordenada inicial de la celda</param>
+            <param name="_ColNameEnd">Coordenada final de la celda</param>
+            <param name="_NombreHoja">Nombre de la hoja</param>
+        </member>
+        <member name="M:CL_Generales.CL_Excel._ArchivoXlsGeneral.FuenteNegrita(System.String,System.String)">
+            <summary>
+            Método para cambiar la fuente en negrita
+            </summary>
+            <param name="_ColNameStart">Coordenada inicial de la celda</param>
+            <param name="_ColNameEnd">Coordenada final de la celda</param>
+        </member>
+        <member name="M:CL_Generales.CL_Excel._ArchivoXlsGeneral.FuenteCursiva(System.String,System.String,System.String)">
+            <summary>
+            Método para cambiar la fuente en cursiva
+            </summary>
+            <param name="_ColNameStart">Coordenada inicial de la celda</param>
+            <param name="_ColNameEnd">Coordenada final de la celda</param>
+            <param name="_NombreHoja">Nombre de la hoja</param>
+        </member>
+        <member name="M:CL_Generales.CL_Excel._ArchivoXlsGeneral.FuenteCursiva(System.String,System.String)">
+            <summary>
+            Método para cambiar la fuente en cursiva
+            </summary>
+            <param name="_ColNameStart">Coordenada inicial de la celda</param>
+            <param name="_ColNameEnd">Coordenada final de la celda</param>
+        </member>
+        <member name="M:CL_Generales.CL_Excel._ArchivoXlsGeneral.TamanioFuente(System.String,System.String,System.Int32,System.String)">
+            <summary>
+            Método para cambiar el tamaño de fuente
+            </summary>
+            <param name="_ColNameStart">Coordenada inicial de la celda</param>
+            <param name="_ColNameEnd">Coordenada final de la celda</param>
+            <param name="_FontSize">Tamaño del fuente</param>
+            <param name="_NombreHoja">Nombre de la hoja</param>
+        </member>
+        <member name="M:CL_Generales.CL_Excel._ArchivoXlsGeneral.TamanioFuente(System.String,System.String,System.Int32)">
+            <summary>
+            Método para cambiar el tamaño de fuente
+            </summary>
+            <param name="_ColNameStart">Coordenada inicial de la celda</param>
+            <param name="_ColNameEnd">Coordenada final de la celda</param>
+            <param name="_FontSize">Tamaño del fuente</param>
+        </member>
+        <member name="M:CL_Generales.CL_Excel._ArchivoXlsGeneral.AutoAjustarCeldas(System.String,System.String,System.String)">
+            <summary>
+            Método para auto ajustar las celdas
+            </summary>
+            <param name="_ColNameStart">Coordenada inicial de la celda</param>
+            <param name="_ColNameEnd">Coordenada final de la celda</param>
+            <param name="_NombreHoja">Nombre de la hoja</param>
+        </member>
+        <member name="M:CL_Generales.CL_Excel._ArchivoXlsGeneral.AutoAjustarCeldas(System.String,System.String)">
+            <summary>
+            Método para auto ajustar las celdas
+            </summary>
+            <param name="_ColNameStart">Coordenada inicial de la celda</param>
+            <param name="_ColNameEnd">Coordenada final de la celda</param>
+        </member>
+        <member name="M:CL_Generales.CL_Excel._ArchivoXlsGeneral.RefrescaTareasExcel">
+            <summary>
+            Método para cerrar las tareas de excel abiertas
+            </summary>
+        </member>
+        <member name="M:CL_Generales.CL_Excel._ArchivoXlsGeneral.CerrarArchivo">
+            <summary>
+            Método para cerrar el archivo de excel
+            </summary>
+        </member>
+        <member name="M:CL_Generales.CL_Excel._ArchivoXlsGeneral.AbrirArchivoExcel">
+            <summary>
+            Método para abrir el archivo de excel
+            </summary>
+        </member>
+        <member name="M:CL_Generales.CL_Excel._ArchivoXlsGeneral.ObtenerColumnaName(System.Int32)">
+            <summary>
+            Método para obtener el nombre de una columna
+            </summary>
+            <param name="_ColumnaIndex">Index de la columna</param>
+            <returns></returns>
+        </member>
+        <member name="M:CL_Generales.CL_Excel._ArchivoXlsGeneral.ObtenerHojaName">
+            <summary>
+            Método para obtener la hoja de excel
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:CL_Generales.CL_Excel._ArchivoXlsGeneral.CreaHojaPivote(System.String,System.String,System.String,System.String,System.String)">
+            <summary>
+            Método para agregar una hoja pivote
+            </summary>
+            <param name="_NameHojaPivote">Nombre de la hoja pivote</param>
+            <param name="_NameHojaBase">Nombre de la hoja base</param>
+            <param name="_CeldaBaseInicial">Coordenada inicial de la celda base</param>
+            <param name="_CeldaBaseFinal">Coordenada final de la celda base</param>
+            <param name="_CeldaPivote">Celda pivote</param>
+        </member>
+        <member name="M:CL_Generales.CL_Excel._ArchivoXlsGeneral.AgregarCampoPivote(System.String,System.Int32)">
+            <summary>
+            Método para agregar campo pivote
+            </summary>
+            <param name="_NameCol">Nombre de la columna</param>
+            <param name="_IndexColTabla">Index de la columna de la tabla</param>
+        </member>
+        <member name="M:CL_Generales.CL_Excel._ArchivoXlsGeneral.AsignarFiltroPivote(System.String)">
+            <summary>
+            Método para asignar filtro a pivote
+            </summary>
+            <param name="_NameCol">Nombre de la columna</param>
+        </member>
+        <member name="M:CL_Generales.CL_Excel._ArchivoXlsGeneral.AsignarRenglonPivote(System.String,System.Int32)">
+            <summary>
+            Método para asignar renglon a pivote
+            </summary>
+            <param name="_NameCol">Nombre de la columna</param>
+            <param name="_Posicion">Número de la posición</param>
+        </member>
+        <member name="M:CL_Generales.CL_Excel._ArchivoXlsGeneral.AsignarColSumPivote(System.String,System.String)">
+            <summary>
+            Método para asignar una suma al pivote
+            </summary>
+            <param name="_NameCol">Nombre de la columna</param>
+            <param name="NombreCampo">Nombre del campo</param>
+        </member>
+        <member name="M:CL_Generales.CL_Excel._ArchivoXlsGeneral.CompactarRenglonPivote(System.String)">
+            <summary>
+            Método para compactar renglones de pivote
+            </summary>
+            <param name="_NameCol">Nombre de la columna</param>
+        </member>
+        <member name="M:CL_Generales.CL_Excel._ArchivoXlsGeneral.FormulaSuma(System.String,System.String,System.String,System.String)">
+            <summary>
+            Método para la formula suma
+            </summary>
+            <param name="_NameHoja">Nombre de la hoja</param>
+            <param name="_CeldaStart">Celda inicial</param>
+            <param name="_CeldaEnd">Celda final</param>
+            <param name="_CeldaFormula">Celda que contiene la formula</param>
+        </member>
+        <member name="M:CL_Generales.CL_Excel._ArchivoXlsGeneral.CalculaCampoRestaPivote(System.String,System.String,System.String,System.String)">
+            <summary>
+            Método para calcular el campo resta pivote
+            </summary>
+            <param name="_NameCol">Nombre de la columna</param>
+            <param name="_NameColA">Nombre de la columna A</param>
+            <param name="_NameColB">Nombre de la columna B</param>
+            <param name="_NombreCampo">Nombre del campo</param>
+        </member>
+        <member name="M:CL_Generales.CL_Excel._ArchivoXlsGeneral.EliminarProcesoExcel">
+            <summary>
+            Método para eliminar el proceso de excel
+            </summary>
+        </member>
+        <member name="M:CL_Generales.CL_Excel._ArchivoXlsGeneral.CalculaCampoRestaPivote(System.String,System.String[],System.String)">
+            <summary>
+            Método para calcular campo de resta pivote
+            </summary>
+            <param name="_NameCol">Nombre de la columna</param>
+            <param name="_NameColumnaSum">Nombre de la columna suma</param>
+            <param name="_NombreCampo">Nombre del campo</param>
+        </member>
+        <member name="M:CL_Generales.CL_Excel._ArchivoXlsGeneral.CalculaCampoSumaPivote(System.String,System.String,System.String,System.String)">
+            <summary>
+            Método para calcular el campo suma pivote
+            </summary>
+            <param name="_NameCol">Nombre de la columna</param>
+            <param name="_NameColA">Nombre de la columna A</param>
+            <param name="_NameColB">Nombre de la columna B</param>
+            <param name="_NombreCampo">Nombre del campo</param>
+        </member>
+        <member name="M:CL_Generales.CL_Excel._ArchivoXlsGeneral.CalculaCampoSumaPivote(System.String,System.String[],System.String)">
+            <summary>
+            Método para calcular el campo suma pivote
+            </summary>
+            <param name="_NameCol">Nombre de la columna</param>
+            <param name="_NameColumnaSum">Nombre de la columna suma</param>
+            <param name="_NombreCampo">Nombre del campo</param>
+        </member>
+        <member name="M:CL_Generales.CL_Excel._ArchivoXlsGeneral.ObtenerNameCampoGrandTotal(System.String)">
+            <summary>
+            Método para obtener nombre del campo final total
+            </summary>
+            <param name="_NameHojaPivote">Nombre de la hoja pivote</param>
+            <returns></returns>
+        </member>
+        <member name="M:CL_Generales.CL_Excel._ArchivoXlsGeneral.OcultarCampoPivote(System.String)">
+            <summary>
+            Método para ocular el campo pivote
+            </summary>
+            <param name="_CampoName">Nombre del campo</param>
+        </member>
+        <member name="M:CL_Generales.CL_Excel._ArchivoXlsGeneral.GuardarLibro">
+            <summary>
+            Método para guardar el libro de excel
+            </summary>
+        </member>
+        <member name="M:CL_Generales.CL_Excel._ArchivoXlsGeneral.GuardarLibro(System.String)">
+            <summary>
+            Método para guardar libro de excel
+            </summary>
+            <param name="_RutaArchivo">Ruta donde se guarda el archivo excel</param>
+        </member>
+        <member name="M:CL_Generales.CL_Excel._ArchivoXlsGeneral.LibroVisible">
+            <summary>
+            Método para poner el libro visible
+            </summary>
+        </member>
+        <member name="M:CL_Generales.CL_Excel._ArchivoXlsGeneral.LibroOculto">
+            <summary>
+            Método para ocultar el libro de excel
+            </summary>
+        </member>
+        <member name="M:CL_Generales.CL_Excel._ArchivoXlsGeneral.EliminarHoja(System.String)">
+            <summary>
+            Método para eliminar hoja de excel
+            </summary>
+            <param name="_NameHoja"></param>
+        </member>
+        <member name="M:CL_Generales.CL_Excel._ArchivoXlsGeneral.ObtenerNameCampoPivote(System.String)">
+            <summary>
+            Método para obtener el nombre del campo pivote
+            </summary>
+            <param name="_ColName">Nombre de la columna</param>
+            <returns></returns>
+        </member>
+        <member name="M:CL_Generales.CL_Excel._ArchivoXlsGeneral.Dispose(System.Boolean)">
+            <summary>
+            Método disponse
+            </summary>
+            <param name="disposing"></param>
+        </member>
+        <member name="M:CL_Generales.CL_Excel._ArchivoXlsGeneral.System#IDisposable#Dispose">
+            <summary>
+            Método IDisponsable
+            </summary>
+        </member>
+        <member name="T:CL_Generales.CL_Excel._EditarArchivoXls">
+            <summary>
+            Clase _EditarArchivoXls
+            </summary>
+        </member>
+        <member name="P:CL_Generales.CL_Excel._EditarArchivoXls.xpath">
+            <summary>
+            Constructor xpath
+            </summary>
+        </member>
+        <member name="M:CL_Generales.CL_Excel._EditarArchivoXls.#ctor">
+            <summary>
+            Constructor _EditarArchivoXls
+            </summary>
+        </member>
+        <member name="M:CL_Generales.CL_Excel._EditarArchivoXls.#ctor(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="_RutaGuardado"></param>
+        </member>
+        <member name="M:CL_Generales.CL_Excel._EditarArchivoXls.CrearExcel(System.Data.DataTable@)">
+            <summary>
+            
+            </summary>
+            <param name="_BaseExcel"></param>
+        </member>
+        <member name="M:CL_Generales.CL_Excel._EditarArchivoXls.EscribirCeldaBoldMerge(System.String,System.Int32)">
+            <summary>
+            
+            </summary>
+            <param name="_Dato"></param>
+            <param name="_Span"></param>
+        </member>
+        <member name="M:CL_Generales.CL_Excel._EditarArchivoXls.EscribirCeldaBoldMerge(System.String,System.Int32,System.Int32)">
+            <summary>
+            
+            </summary>
+            <param name="_Dato"></param>
+            <param name="_Span"></param>
+            <param name="_FuenteSize"></param>
+        </member>
+        <member name="M:CL_Generales.CL_Excel._EditarArchivoXls.EscribirCeldaMerge(System.String,System.Int32)">
+            <summary>
+            
+            </summary>
+            <param name="_Dato"></param>
+            <param name="_Span"></param>
+        </member>
+        <member name="M:CL_Generales.CL_Excel._EditarArchivoXls.EscribirCeldaMerge(System.String,System.Int32,System.Int32)">
+            <summary>
+            
+            </summary>
+            <param name="_Dato"></param>
+            <param name="_Span"></param>
+            <param name="_FuenteSize"></param>
+        </member>
+        <member name="M:CL_Generales.CL_Excel._EditarArchivoXls.EscribirCelda(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="_Dato"></param>
+        </member>
+        <member name="M:CL_Generales.CL_Excel._EditarArchivoXls.EscribirCelda(System.String,System.Int32)">
+            <summary>
+            
+            </summary>
+            <param name="_Dato"></param>
+            <param name="_FuenteSize"></param>
+        </member>
+        <member name="M:CL_Generales.CL_Excel._EditarArchivoXls.EscribirCelda(System.String,System.Int32,System.Int32)">
+            <summary>
+            
+            </summary>
+            <param name="_Dato"></param>
+            <param name="_FuenteSize"></param>
+            <param name="_Borde"></param>
+        </member>
+        <member name="M:CL_Generales.CL_Excel._EditarArchivoXls.EscribirCeldaBold(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="_Dato"></param>
+        </member>
+        <member name="M:CL_Generales.CL_Excel._EditarArchivoXls.EscribirCeldaBold(System.String,System.Int32)">
+            <summary>
+            
+            </summary>
+            <param name="_Dato"></param>
+            <param name="_FuenteSize"></param>
+        </member>
+        <member name="M:CL_Generales.CL_Excel._EditarArchivoXls.EscribirHeaders(System.Collections.ArrayList,System.Single)">
+            <summary>
+            
+            </summary>
+            <param name="_Cabecera"></param>
+            <param name="_FontSize"></param>
+        </member>
+        <member name="M:CL_Generales.CL_Excel._EditarArchivoXls.EscribirHeaders(System.Collections.ArrayList)">
+            <summary>
+            
+            </summary>
+            <param name="_Cabecera"></param>
+        </member>
+        <member name="M:CL_Generales.CL_Excel._EditarArchivoXls.EscribirHeaders(System.Collections.ArrayList,System.Int32[],System.Single)">
+            <summary>
+            
+            </summary>
+            <param name="_Cabecera"></param>
+            <param name="_Span"></param>
+            <param name="_FontSize"></param>
+        </member>
+        <member name="M:CL_Generales.CL_Excel._EditarArchivoXls.EscribirHeaders(System.Collections.ArrayList,System.Int32[])">
+            <summary>
+            
+            </summary>
+            <param name="_Cabecera"></param>
+            <param name="_Span"></param>
+        </member>
+        <member name="M:CL_Generales.CL_Excel._EditarArchivoXls.BarrerTablaExcel">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:CL_Generales.CL_Excel._EditarArchivoXls.BarrerTablaExcelFormatoT">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:CL_Generales.CL_Excel._EditarArchivoXls.CerrarExcel(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="_RutaXls"></param>
+        </member>
+        <member name="M:CL_Generales.CL_Excel._EditarArchivoXls.CargarExcel(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="_RutaXls"></param>
+        </member>
+        <member name="M:CL_Generales.CL_Excel._EditarArchivoXls.FormatoNumeroCelda(System.String,System.String,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="_HojaXls"></param>
+            <param name="_CeldaStart"></param>
+            <param name="_CeldaEnd"></param>
+        </member>
+        <member name="M:CL_Generales.CL_Excel._EditarArchivoXls.FormatoMonedaCelda(System.String,System.String,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="_HojaXls"></param>
+            <param name="_CeldaStart"></param>
+            <param name="_CeldaEnd"></param>
+        </member>
+        <member name="M:CL_Generales.CL_Excel._EditarArchivoXls.AsignarFuenteExcel(System.String,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="_RutaXls"></param>
+            <param name="_NameFuente"></param>
+        </member>
+        <member name="M:CL_Generales.CL_Excel._EditarArchivoXls.AlignLeftCeldas(System.String,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="_ColNameStart"></param>
+            <param name="_ColNameEnd"></param>
+        </member>
+        <member name="M:CL_Generales.CL_Excel._EditarArchivoXls.AlignRighCeldas(System.String,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="_ColNameStart"></param>
+            <param name="_ColNameEnd"></param>
+        </member>
+        <member name="M:CL_Generales.CL_Excel._EditarArchivoXls.BorderCeldas(System.String,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="_ColNameStart"></param>
+            <param name="_ColNameEnd"></param>
+        </member>
+        <member name="M:CL_Generales.CL_Excel._EditarArchivoXls.ColorFuente(System.String,System.String,System.Drawing.Color)">
+            <summary>
+            
+            </summary>
+            <param name="_ColNameStart"></param>
+            <param name="_ColNameEnd"></param>
+            <param name="_ColorFont"></param>
+        </member>
+        <member name="M:CL_Generales.CL_Excel._EditarArchivoXls.FuenteNegrita(System.String,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="_ColNameStart"></param>
+            <param name="_ColNameEnd"></param>
+        </member>
+        <member name="M:CL_Generales.CL_Excel._EditarArchivoXls.TamanioFuente(System.String,System.String,System.Int32)">
+            <summary>
+            
+            </summary>
+            <param name="_ColNameStart"></param>
+            <param name="_ColNameEnd"></param>
+            <param name="_FontSize"></param>
+        </member>
+        <member name="M:CL_Generales.CL_Excel._EditarArchivoXls.AutoAjustarCeldas(System.String,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="_ColNameStart"></param>
+            <param name="_ColNameEnd"></param>
+        </member>
+        <member name="M:CL_Generales.CL_Excel._EditarArchivoXls.ObtenerDatoCelda(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="_ColName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:CL_Generales.CL_Excel._EditarArchivoXls.ObtenerNameHojaXls(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="_RutaArchivoXls"></param>
+            <returns></returns>
+        </member>
+        <member name="T:CL_Generales.CL_ReglaNegocio.CL_RnCatalogos">
+            <summary>
+            Clase CL_RnCatalogos - Regla de Negocios de Catalogos
+            </summary>
+        </member>
+        <member name="F:CL_Generales.CL_ReglaNegocio.CL_RnCatalogos._sUsuarioSesion">
+            <summary>
+            Variable para identificar el usuario que tiene la sesión (_sUsuarioSesion)
+            </summary>
+        </member>
+        <member name="P:CL_Generales.CL_ReglaNegocio.CL_RnCatalogos._UsuarioInicioSesion">
+            <summary>
+            Variable _UsuarioInicioSesion
+            </summary>
+        </member>
+        <member name="M:CL_Generales.CL_ReglaNegocio.CL_RnCatalogos.ObtenerEntidades(System.Data.DataSet@,System.String,System.String,System.Int32)">
+            <summary>
+            Método para obtener entidades
+            </summary>
+            <param name="oDs">Retorna la información</param>
+            <param name="sCodEntidad">Código de la entidad</param>
+            <param name="sNomEntidad">Nombre de la entidad</param>
+            <param name="idConexion">Id de conexión</param>
+        </member>
+        <member name="M:CL_Generales.CL_ReglaNegocio.CL_RnCatalogos.ObtenerUsuarios(System.Data.DataSet@,System.String,System.String,System.String,System.Int32)">
+            <summary>
+            Método para obtener usuarios
+            </summary>
+            <param name="oDs"></param>
+            <param name="sCodUsuario">Código de usuario</param>
+            <param name="sNomCorto">Nombre corto del usuario</param>
+            <param name="sNomUsuario">Nombre completo del usuario</param>
+            <param name="idConexion">Id de conexión</param>
+        </member>
+        <member name="M:CL_Generales.CL_ReglaNegocio.CL_RnCatalogos.ObtenerSigCodUsuario(System.Data.DataSet@)">
+            <summary>
+            Método para obtener el código siguiente disponible del usuario
+            </summary>
+            <param name="oDs">Retorna el dato correspondiente</param>
+        </member>
+        <member name="M:CL_Generales.CL_ReglaNegocio.CL_RnCatalogos.AbcUsuarios(System.Data.DataSet@,System.String,System.String,System.String,System.String,System.String,System.String,System.String)">
+            <summary>
+            Método para ABC Usuarios
+            </summary>
+            <param name="oDs">Retorna la informacion</param>
+            <param name="sCodUsuario">Código del usuario</param>
+            <param name="sNomCorto">Nombre corto de usuario</param>
+            <param name="sNomUsuario">Nombre completo del usuario</param>
+            <param name="sClave">Contraseña de usuario</param>
+            <param name="sDepto">Código del departamento</param>
+            <param name="sTipoUsuario">Tipo de usuario</param>
+            <param name="sTipoMov">Tipo Movimiento</param>
+        </member>
+        <member name="M:CL_Generales.CL_ReglaNegocio.CL_RnCatalogos.ObtenerEtiquetas(System.Data.DataSet@,System.String,System.String)">
+            <summary>
+            Método para obtener las etiquetas
+            </summary>
+            <param name="oDs">Retorna la información obtenida</param>
+            <param name="sCodEtiqueta">Código de la etiqueta</param>
+            <param name="sNomEtiqueta">Nombre de la etiqueta</param>
+        </member>
+        <member name="M:CL_Generales.CL_ReglaNegocio.CL_RnCatalogos.AbcEtiquetas(System.Data.DataSet@,System.String,System.String,System.String,System.String,System.String,System.String,System.String)">
+            <summary>
+            Método para ABC de Etiquetas
+            </summary>
+            <param name="oDs">Retorna el mensaje correspondiente a la transacción</param>
+            <param name="sTipoMov">Tipo de movimiento "A" - Alta, "B" - Baja, "C" - Cambio</param>
+            <param name="sCodEtiqueta">Código de la etiqueta</param>
+            <param name="sNomEtiqueta">Nombre de la etiqueta</param>
+            <param name="sNumConsig">Clave de consignación</param>
+            <param name="sNomConsig">Nombre de la consignación</param>
+            <param name="cCalidad">Calidad producto</param>
+            <param name="sProductor">Calidad producto</param>
+        </member>
+        <member name="M:CL_Generales.CL_ReglaNegocio.CL_RnCatalogos.ObtenerSigCodEtiqueta(System.Data.DataSet@)">
+            <summary>
+            Método para obtener el siguiente código de etiqueta
+            </summary>
+            <param name="oDs">Retorna la información correspondiente</param>
+        </member>
+        <member name="M:CL_Generales.CL_ReglaNegocio.CL_RnCatalogos.ObtenerProductores(System.Data.DataSet@,System.String,System.String)">
+            <summary>
+            Método para obtener los productores
+            </summary>
+            <param name="oDs">Retorna la información obtenida</param>
+            <param name="sCodProductor">Código del productor</param>
+            <param name="sNomProductor">Nombre del productor</param>
+        </member>
+        <member name="M:CL_Generales.CL_ReglaNegocio.CL_RnCatalogos.AbcProductores(System.Data.DataSet@,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String)">
+            <summary>
+            Método para ABC de productores
+            </summary>
+            <param name="oDs"></param>
+            <param name="sNumProductor">Código del productor</param>
+            <param name="sNomproductor">Nombre del productor</param>
+            <param name="sSerie">Código serie</param>
+            <param name="sGrower">Código de Grower</param>
+            <param name="sPacker">Código de Packer </param>
+            <param name="sRfc">Código de RFC</param>
+            <param name="sDireccion1">Dirección 1 del productor</param>
+            <param name="sDireccion2">Dirección 2 del productor</param>
+            <param name="sTel">Número de teléfono</param>
+            <param name="sCiudad">Nombre de la ciudad</param>
+            <param name="sEstado">Nombre del estado</param>
+            <param name="sTerceros">Facturación por terceros a nacional</param>
+            <param name="sTercerosExp">Facturación por terceros a exportación</param>
+            <param name="sNomCorto">Nombre corto del productor</param>
+        </member>
+        <member name="M:CL_Generales.CL_ReglaNegocio.CL_RnCatalogos.ObtenerEmpacadores(System.Data.DataSet@)">
+            <summary>
+            Método para obtener empacadores
+            </summary>
+            <param name="oDs">Retorna la información</param>
+        </member>
+        <member name="M:CL_Generales.CL_ReglaNegocio.CL_RnCatalogos.ObtenerMercados(System.Data.DataSet@)">
+            <summary>
+            Método para obtener los mercador
+            </summary>
+            <param name="oDs">Retorna la información</param>
+        </member>
+        <member name="M:CL_Generales.CL_ReglaNegocio.CL_RnCatalogos.ObtenerUbicaciones(System.Data.DataSet@,System.String,System.String)">
+            <summary>
+            Método para obtener ubicaciones
+            </summary>
+            <param name="oDs">Retorna información</param>
+            <param name="sCodUbicacion">Código de ubicación</param>
+            <param name="sNomUbicacion">Nombre de la ubicación</param>
+        </member>
+        <member name="M:CL_Generales.CL_ReglaNegocio.CL_RnCatalogos.ObtenerBodegasUsuarios(System.Data.DataSet@,System.String,System.Int32)">
+            <summary>
+            Método para obtener bodegas
+            </summary>
+            <param name="oDs">Retornar información</param>
+            <param name="sCodUsuario">Código de usuario</param>
+            <param name="idConexion">Id de conexión</param>
+        </member>
+        <member name="M:CL_Generales.CL_ReglaNegocio.CL_RnCatalogos.AsignarBodegasUsuario(System.String,System.String,System.Int32)">
+            <summary>
+            Método para asignar bodegas a los usuarios
+            </summary>
+            <param name="sCodUsuario">Código de usuario</param>
+            <param name="sCodBodega">Código de bodega</param>
+            <param name="idConexion">Id de conexión</param>
+        </member>
+        <member name="M:CL_Generales.CL_ReglaNegocio.CL_RnCatalogos.ObtenerRecetas(System.Data.DataSet@,System.String,System.String,System.String,System.String,System.String,System.Int32,System.String,System.Int32,System.String)">
+            <summary>
+            Método para obtener las recetas general y detalle
+            </summary>
+            <param name="oDs">Retorna la informacion obtenida</param>
+            <param name="sBodega">Código de bodega</param>
+            <param name="sFde">Fecha inicial</param>
+            <param name="sFa">Fecha final</param>
+            <param name="sSolicitante">Código del solicitante</param>
+            <param name="sReceta">Código de la receta</param>
+            <param name="sEstatus">A - Autorizado, N - No Autorizado</param>
+            <param name="sMostrar">G - General, D - Detalle</param>
+            <param name="iIdConexion">Id de conexión 1 - SistemasDB, 2 - Data_15, 3 - Easymaint</param>
+            <param name="sCodUsuario">Código del usuario</param>
+        </member>
+        <member name="M:CL_Generales.CL_ReglaNegocio.CL_RnCatalogos.GuardarAutorizaReceta(System.Data.DataSet@,System.String,System.String,System.String,System.String,System.Int32)">
+            <summary>
+            Método para guardar la autorización de la receta
+            </summary>
+            <param name="oDs">Retorna la información obtenida</param>
+            <param name="sReceta">Código de la receta</param>
+            <param name="sUsuario">Código de usuario</param>
+            <param name="sTipoMov">Tipo movimiento</param>
+            <param name="sNomEquipo">Nombre del equipo</param>
+            <param name="iIdConexion">Código de conexión</param>
+        </member>
+        <member name="M:CL_Generales.CL_ReglaNegocio.CL_RnCatalogos.ObtenerDatosBuscar(System.Data.DataSet@,System.Int32,System.String,System.String,System.String,System.Int32)">
+            <summary>
+            Método para obtener la busqueda
+            </summary>
+            <param name="oDs">Retorna la información obtenida</param>
+            <param name="iNumOpcion">Número de opción</param>
+            <param name="sNumCodigo">Número de código</param>
+            <param name="sDescripcion">Descripción del código</param>
+            <param name="sUsuario">Código del usuario</param>
+            <param name="iIdConexion">Número de conexión</param>
+        </member>
+        <member name="M:CL_Generales.CL_ReglaNegocio.CL_RnCatalogos.ObtenerDatosBuscarDependencia(System.Data.DataSet@,System.Int32,System.String,System.String,System.String,System.String,System.Int32)">
+            <summary>
+            Método para obtener la busqueda con dependencia
+            </summary>
+            <param name="oDs">Retorna la información obtenida</param>
+            <param name="iNumOpcion">Número de opción</param>
+            <param name="sNumCodigo">Número de código</param>
+            <param name="sDescripcion">Descripción del código</param>
+            <param name="sUsuario">Código del usuario</param>
+            <param name="sCondicionCodigo">C+odigo con el que se desea filtrar con dependencia</param>
+            <param name="iIdConexion">Número de conexión</param>
+        </member>
+        <member name="M:CL_Generales.CL_ReglaNegocio.CL_RnCatalogos.ObtenerEstados(System.Data.DataSet@,System.Int32,System.String)">
+            <summary>
+            Método para obtener los estados del pais de México
+            </summary>
+            <param name="oDs">Retorna la información obtenida</param>
+            <param name="iNumEstado">Número de estado</param>
+            <param name="sNomEstado">Nombre del estado</param>
+        </member>
+        <member name="M:CL_Generales.CL_ReglaNegocio.CL_RnCatalogos.ObtenerDatoConfiguración(System.Data.DataSet@,System.Int32)">
+            <summary>
+            Método para obtener un dato de la tabla configuraciones
+            </summary>
+            <param name="oDs">Retorna la información obtenida</param>
+            <param name="iId">Número de id</param>
+        </member>
+        <member name="M:CL_Generales.CL_ReglaNegocio.CL_RnCatalogos.IniciarSesion(System.Data.DataSet@,System.String,System.String,System.Int32)">
+            <summary>
+            Método para iniciar sesión
+            </summary>
+            <param name="oDs">Retornar la información obtenida</param>
+            <param name="sUsuario">Código de usuario</param>
+            <param name="sClave">Contraseña del usuario</param>
+            <param name="iIdConexion">Número de conexión</param>
+        </member>
+        <member name="M:CL_Generales.CL_ReglaNegocio.CL_RnCatalogos.IniciarSesionSistemas(System.Data.DataSet@,System.String,System.String,System.Int32)">
+            <summary>
+            Método para iniciar sesión - Sistemas
+            </summary>
+            <param name="oDs">Retorna la información obtenida</param>
+            <param name="sUsuario">Código de usuario</param>
+            <param name="sClave">Contraseña del usuario</param>
+            <param name="iIdConexion">Número de conexión</param>
+        </member>
+        <member name="M:CL_Generales.CL_ReglaNegocio.CL_RnCatalogos.WebIniciarSesion(System.Data.DataSet@,System.String,System.String,System.Int32)">
+            <summary>
+            Método para iniciar sesión WEB
+            </summary>
+            <param name="oDs"></param>
+            <param name="sUsuario"></param>
+            <param name="sClave"></param>
+            <param name="iIdConexion"></param>
+        </member>
+        <member name="M:CL_Generales.CL_ReglaNegocio.CL_RnCatalogos.WebObtenerMenu(System.Data.DataSet@,System.Int32,System.Int32)">
+            <summary>
+            Método para obtener el menú web
+            </summary>
+            <param name="oDs">Retorna la informacion requerida</param>
+            <param name="iCodUsuario">Código del usuario</param>
+            <param name="iIdConexion">Id de conexión</param>
+        </member>
+        <member name="M:CL_Generales.CL_ReglaNegocio.CL_RnCatalogos.WebRegistroUsuario(System.String,System.String,System.String,System.String,System.String,System.Int32)">
+            <summary>
+            Método para dar de alta lo el usuario en la pagina web
+            </summary>
+            <param name="sClave">Contraseña del usuario</param>
+            <param name="sNomUsuario">Nombre completo del usuario</param>
+            <param name="sNomCorto">Nombre de usuario</param>
+            <param name="sNumDepto">Número del departamento del usuario</param>
+            <param name="sDescPuesto">Puesto al que pertence</param>
+            <param name="iIdConexion">Id de conexión</param>
+        </member>
+        <member name="M:CL_Generales.CL_ReglaNegocio.CL_RnCatalogos.WebObtenerUsuarios(System.Data.DataSet@,System.Int32)">
+            <summary>
+            Método para obtener los usuarios
+            </summary>
+            <param name="oDs"></param>
+            <param name="iIdConexion"></param>
+        </member>
+        <member name="M:CL_Generales.CL_ReglaNegocio.CL_RnCatalogos.WebValidaExisteUsuario(System.Data.DataSet@,System.String,System.Int32)">
+            <summary>
+            Método para validar si el usuario existe
+            </summary>
+            <param name="oDs"></param>
+            <param name="sNomUsuario"></param>
+            <param name="iIdConexion"></param>
+        </member>
+        <member name="M:CL_Generales.CL_ReglaNegocio.CL_RnCatalogos.WebObtenerDepartamentos(System.Data.DataSet@,System.Int32)">
+            <summary>
+            Método para obtener los departamentos WEB
+            </summary>
+            <param name="oDs">Retorna la información obtenida</param>
+            <param name="iIdConexion">Id de conexión</param>
+        </member>
+        <member name="M:CL_Generales.CL_ReglaNegocio.CL_RnCatalogos.AbcMercados(System.Data.DataSet@,System.String,System.String,System.String,System.String)">
+            <summary>
+            Método para ABC de Etiquetas
+            </summary>
+            <param name="oDs">Retorna el mensaje correspondiente a la transacción</param>
+            <param name="sTipoMov">Tipo de movimiento "A" - Alta, "B" - Baja, "C" - Cambio</param>
+            <param name="sCodMercado">Código del mercado</param>
+            <param name="sNomMercado">Nombre del mercado</param>
+            <param name="sMdoNomina">codigo de nomina mercado</param>
+        </member>
+        <member name="M:CL_Generales.CL_ReglaNegocio.CL_RnCatalogos.ObtenerSigCodMercado(System.Data.DataSet@)">
+            <summary>
+            Método para obtener el siguiente código de etiqueta
+            </summary>
+            <param name="oDs">Retorna la información correspondiente</param>
+        </member>
+        <member name="M:CL_Generales.CL_ReglaNegocio.CL_RnCatalogos.obtenerCommoditys(System.Data.DataSet@,System.String,System.String)">
+            <summary>
+            Metodo para consultar commoditys
+            </summary>
+            <param name="oDs"></param>
+            <param name="sCodCommodity"></param>
+            <param name="sNomCommodity"></param>
+        </member>
+        <member name="M:CL_Generales.CL_ReglaNegocio.CL_RnCatalogos.AbcCommodity(System.Data.DataSet@,System.String,System.String,System.String,System.String,System.String)">
+            <summary>
+            Método para ABC de Etiquetas
+            </summary>
+            <param name="oDs">Retorna el mensaje correspondiente a la transacción</param>
+            <param name="sTipoMov">Tipo de movimiento "A" - Alta, "B" - Baja, "C" - Cambio</param>
+            <param name="sCodCommodity">Código del commodity</param>
+            <param name="sNomCommodity">Nombre del commodity</param>
+            <param name="sAbreviacion">Abreviacion commodity</param>
+            <param name="sPalletTag">codigo de nomina mercado</param>
+        </member>
+        <member name="M:CL_Generales.CL_ReglaNegocio.CL_RnCatalogos.ObtenerSigCodCommodity(System.Data.DataSet@)">
+            <summary>
+            Método para obtener el siguiente código de etiqueta
+            </summary>
+            <param name="oDs">Retorna la información correspondiente</param>
+        </member>
+        <member name="M:CL_Generales.CL_ReglaNegocio.CL_RnCatalogos.obtenerVarietys(System.Data.DataSet@,System.String,System.String,System.String)">
+            <summary>
+            Metodo para consultar commoditys
+            </summary>
+            <param name="oDs"></param>
+            <param name="sCodCommodity"></param>
+            <param name="sCodVariety"></param>
+            <param name="sNomVariety"></param>
+        </member>
+        <member name="M:CL_Generales.CL_ReglaNegocio.CL_RnCatalogos.AbcVarietys(System.Data.DataSet@,System.String,System.String,System.String,System.String,System.String)">
+            <summary>
+            Método para ABC de Etiquetas
+            </summary>
+            <param name="oDs">Retorna el mensaje correspondiente a la transacción</param>
+            <param name="sTipoMov">Tipo de movimiento "A" - Alta, "B" - Baja, "C" - Cambio</param>
+            <param name="sCodCommodity">Código del variety</param>
+            <param name="sNomVariety">Nombre del variety</param>
+            <param name="sCodVariety">Codigo  variety</param>
+            <param name="sPalletTag">codigo pallet tag</param>
+        </member>
+        <member name="M:CL_Generales.CL_ReglaNegocio.CL_RnCatalogos.ObtenerSigCodVariety(System.Data.DataSet@)">
+            <summary>
+            Método para obtener el siguiente código de etiqueta
+            </summary>
+            <param name="oDs">Retorna la información correspondiente</param>
+        </member>
+        <member name="M:CL_Generales.CL_ReglaNegocio.CL_RnCatalogos.obtenerSize(System.Data.DataSet@,System.String,System.String)">
+            <summary>
+            Metodo para consultar commoditys
+            </summary>
+            <param name="oDs"></param>
+            <param name="sCodSize"></param>
+            <param name="sNomSize"></param>
+        </member>
+        <member name="M:CL_Generales.CL_ReglaNegocio.CL_RnCatalogos.AbcSize(System.Data.DataSet@,System.String,System.String,System.String)">
+            <summary>
+            Método para ABC de Etiquetas
+            </summary>
+            <param name="oDs">Retorna el mensaje correspondiente a la transacción</param>
+            <param name="sTipoMov">Tipo de movimiento "A" - Alta, "B" - Baja, "C" - Cambio</param>
+            <param name="sCodSize">Código del variety</param>
+            <param name="sNomSize">Nombre del variety</param>
+        </member>
+        <member name="M:CL_Generales.CL_ReglaNegocio.CL_RnCatalogos.ObtenerSigCodSize(System.Data.DataSet@)">
+            <summary>
+            Método para obtener el siguiente código de etiqueta
+            </summary>
+            <param name="oDs">Retorna la información correspondiente</param>
+        </member>
+        <member name="M:CL_Generales.CL_ReglaNegocio.CL_RnCatalogos.obtenerSize0533(System.Data.DataSet@,System.String,System.String,System.String)">
+            <summary>
+            Metodo para consultar commoditys
+            </summary>
+            <param name="oDs"></param>
+            <param name="sCodstyle"></param>
+            <param name="sCodSize"></param>
+            <param name="sNomsize"></param>
+        </member>
+        <member name="M:CL_Generales.CL_ReglaNegocio.CL_RnCatalogos.AbcSize0533(System.Data.DataSet@,System.String,System.String,System.String,System.String)">
+            <summary>
+            Método para ABC de Etiquetas
+            </summary>
+            <param name="oDs">Retorna el mensaje correspondiente a la transacción</param>
+            <param name="sTipoMov">Tipo de movimiento "A" - Alta, "B" - Baja, "C" - Cambio</param>
+            <param name="sCodstyle">Código del variety</param>
+            <param name="sNomsize">Nombre del variety</param>
+            <param name="sCodSize">Codigo  variety</param>
+        </member>
+        <member name="M:CL_Generales.CL_ReglaNegocio.CL_RnCatalogos.ObtenerSigCodSize0533(System.Data.DataSet@)">
+            <summary>
+            Método para obtener el siguiente código de etiqueta
+            </summary>
+            <param name="oDs">Retorna la información correspondiente</param>
+        </member>
+        <member name="M:CL_Generales.CL_ReglaNegocio.CL_RnCatalogos.ObtenerDatosDeBusqueda(System.Data.DataSet@,System.Int16)">
+            <summary>
+            Metodo utilizado en la ventana de busqueda del formulario mantenimiento de empleados.
+            Carga todos los items de la tabla indicada en la funcion SPC101044_ME_ObtenerDatosBusqueda
+            la busqueda se hará local dentro del grid que se llena.
+            </summary>
+            <param name="oDs"> dataset con el que se llenan los datos.</param>
+            <param name="piClaveId"> clave de empleado</param>
+        </member>
+        <member name="M:CL_Generales.CL_ReglaNegocio.CL_RnCatalogos.ObtenerDatosEmpleado(System.Data.DataSet@,System.String)">
+            <summary>
+            Consulta los datos del empleado solicitado en formulario mantenimiento de empleados.
+            </summary>
+            <param name="oDs"> dataset con el que se llenan los datos.</param>
+            <param name="psClaveId"> clave de empleado</param>
+        </member>
+        <member name="M:CL_Generales.CL_ReglaNegocio.CL_RnCatalogos.ObtenerDescripciones(System.Data.DataSet@,System.Int32,System.Int32,System.Int32)">
+            <summary>
+            Obtiene las descripciones de MSSQL de los campos que le corresponden.
+            La funcion retorna: Nom_empaque_, Nom_Cultivo_, Nom_Actividad_, Tipo_Act_emp_
+            </summary>  
+            <param name="oDs"></param>
+            <param name="pDepto"> Departamento </param>
+            <param name="pCultivo"> Cultivo a consultar.</param>
+            <param name="pActividad"> Puesto o actividad a consultar.</param>
+        </member>
+        <member name="M:CL_Generales.CL_ReglaNegocio.CL_RnCatalogos.ActualizarDatosEmpleado(System.Data.DataSet@,System.String,System.String,System.String,System.Int32,System.Int16,System.String)">
+            <summary>
+            Actualiza los datos del empleado en boton de guradar del formulario mantenimiento de empleados.
+            </summary>
+            <param name="oDs"></param>
+            <param name="pDepto"></param>
+            <param name="pCultivo"></param>
+            <param name="pActividad"></param>
+            <param name="pNumeroEmp"></param>
+            <param name="pClaveVerificacion"></param>
+            <param name="pFechaAsistencia"></param>
+        </member>
+        <member name="M:CL_Generales.CL_ReglaNegocio.CL_RnCatalogos.GuardarActualizarDatosEmpleado(System.Data.DataSet@,System.Int32,System.Int16)">
+            <summary>
+            @_CodEmpleado INTEGER,
+            @_bValxConfirma BIT
+            </summary>
+        </member>
+        <member name="M:CL_Generales.CL_ReglaNegocio.CL_RnCatalogos.ObtenerDatosDeBusqueda(System.Data.DataTable@,System.Int16,System.Int16)">
+            <summary>
+            Metodo utilizado en la ventana de busqueda del formulario mantenimiento de empleados.
+            Carga todos los items de la tabla indicada en la funcion SPC101044_ME_ObtenerDatosBusqueda
+            la busqueda se hará local dentro del grid que se llena.
+            </summary>
+            <param name="oDs"> dataset con el que se llenan los datos.</param>
+            <param name="piSemana"> dataset con el que se llenan los datos.</param>
+            <param name="piDias"> clave de empleado</param>
+        </member>
+        <member name="M:CL_Generales.CL_ReglaNegocio.CL_RnCatalogos.ObtenerSemanas(System.Data.DataTable@)">
+            <summary>
+            Consulta las semanas del catalogo y muesta la semana actual, esta para mostrarse primero que todas.
+            </summary>
+            <param name="oDs"></param>
+        </member>
+        <member name="M:CL_Generales.CL_ReglaNegocio.CL_RnCatalogos.spc10_ObtenerHorasExtras(System.Data.DataSet@)">
+            <summary>
+            
+            </summary>
+            <param name="oDs"></param>
+        </member>
+        <member name="M:CL_Generales.CL_ReglaNegocio.CL_RnCatalogos.spc10_ObtenerHorasExtrasPorDia(System.Data.DataSet@)">
+            <summary>
+            
+            </summary>
+            <param name="oDs"></param>
+        </member>
+        <member name="M:CL_Generales.CL_ReglaNegocio.CL_RnCatalogos.SPC10_ObtenerPolizaSUA(System.Data.DataSet@,System.String,System.String)">
+            <summary>
+            spc10_ObtenerHorasExtras
+            </summary>
+            <param name="oDs"></param>
+            <param name="year"></param>
+            <param name="month"></param>
+        </member>
+        <member name="M:CL_Generales.CL_ReglaNegocio.CL_RnEmbarques.ObtenerDetalleGridCancelarEmbarque(System.Data.DataSet@,System.String,System.String,System.String,System.String)">
+            <summary>
+            SPC05_ObtenerDetalleGridCancelarEmbarque
+            </summary>
+            <param name="oDs"></param>
+        </member>
+        <member name="M:CL_Generales.CL_ReglaNegocio.CL_RnEmbarques.CancelaEmbarqueCnTipoMov2oMercadoNacional(System.Data.DataSet@,System.String,System.String,System.String,System.String)">
+            <summary>
+            SPC05_CancelaTransaccion
+            </summary>
+            <param name="oDs"></param>
+            <param name="No_manif"></param>
+            <param name="Fecha_cancelacion"></param>
+            <param name="tipo"></param>
+            <param name="RSStatus"></param>
+        </member>
+        <member name="M:CL_Generales.CL_ReglaNegocio.CL_RnEmbarques.VerificarEmbarque(System.Data.DataSet@,System.String,System.String,System.String)">
+            <summary>
+            SPC05_VerificarEmbarque
+            </summary>
+            <param name="oDs"></param>
+            <param name="Cod_Ubicacion"></param>
+            <param name="Cod_Mercado"></param>
+            <param name="No_manif"></param>
+        </member>
+        <member name="M:CL_Generales.CL_ReglaNegocio.CL_RnEmbarques.CancelaEmbarqueCnTipoMov1oMercadoExportacion(System.Data.DataSet@,System.String,System.String,System.String)">
+            <summary>
+            SpC05_Cancelaembarque
+            </summary>
+            <param name="oDs"></param>
+            <param name="Cod_Id"></param>
+            <param name="Fecha_cancelacion"></param>
+            <param name="RSStatus"></param>
+        </member>
+        <member name="M:CL_Generales.CL_ReglaNegocio.CL_RnEmbarques.SPC05_ConsultaSizeRPC(System.Data.DataSet@,System.String,System.String,System.String)">
+            <summary>
+            SPC05_ConsultaSizeRPC
+            </summary>
+            <param name="oDs"></param>
+            <param name="Fecha_Inicial"></param>
+            <param name="Fecha_Final"></param>
+            <param name="Fecha_Subida"></param>
+        </member>
+        <member name="T:CL_Generales.CL_ReglaNegocio.CL_RnNomina">
+            <summary>
+            Clase CL_RnNomina - Regla de Negocios de Nomina
+            </summary>
+        </member>
+        <member name="M:CL_Generales.CL_ReglaNegocio.CL_RnNomina.CargarEmpresas(System.Data.DataSet@,System.String,System.String,System.String)">
+            <summary>
+            Metodo Cargar Empresas Nomina
+            </summary>
+        </member>
+        <member name="M:CL_Generales.CL_ReglaNegocio.CL_RnNomina.CargarSemanas(System.Data.DataSet@,System.String)">
+            <summary>
+            Metodo CargarSemanas
+            </summary>
+            <param name="oDs"></param>
+            <param name="semana"></param>
+        </member>
+        <member name="M:CL_Generales.CL_ReglaNegocio.CL_RnNomina.CargarSemanaActual(System.Data.DataSet@)">
+            <summary>
+            
+            </summary>
+            <param name="oDs"></param>
+        </member>
+        <member name="M:CL_Generales.CL_ReglaNegocio.CL_RnNomina.CargarDescUbicacion(System.Data.DataSet@,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="oDs"></param>
+        </member>
+        <member name="M:CL_Generales.CL_ReglaNegocio.CL_RnNomina.ReporteGrafico(System.Data.DataSet@,System.String,System.String,System.String)">
+            <summary>
+            ReporteGrafico
+            </summary>
+            <param name="oDs"></param>
+            <param name="sCodEmpresa"></param>
+            <param name="sCodUbicacion"></param>
+            <param name="sSemana"></param>
+        </member>
+        <member name="M:CL_Generales.CL_ReglaNegocio.CL_RnNomina.ReporteExcel(System.Data.DataSet@,System.String,System.String,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="oDs"></param>
+            <param name="sCodEmpresa"></param>
+            <param name="sCodUbicacion"></param>
+            <param name="sSemana"></param>
+        </member>
+        <member name="M:CL_Generales.CL_ReglaNegocio.CL_RnNomina.ReporteGraficoListaRaya(System.Data.DataSet@,System.String,System.String,System.String,System.String)">
+            <summary>
+            ReporteGraficoListaRaya
+            </summary>
+            <param name="oDs"></param>
+            <param name="sCodEmpresa"></param>
+            <param name="sCodUbicacion"></param>
+            <param name="sSemana"></param>
+            <param name="tipoNomina"></param>
+        </member>
+        <member name="M:CL_Generales.CL_ReglaNegocio.CL_RnNomina.ReporteTotalListaRaya(System.Data.DataSet@,System.String)">
+            <summary>
+            Reporte Total Lista Raya
+            </summary>
+            <param name="oDs"></param>
+            <param name="sSemana"></param>
+        </member>
+        <member name="M:CL_Generales.CL_ReglaNegocio.CL_RnNomina.ReporteDenominacionesEfectivo(System.Data.DataSet@,System.String,System.String,System.String,System.String)">
+            <summary>
+            Obtener denominaciones de efectivo 
+            </summary>
+            <param name="oDs"></param>
+            <param name="sCodEmpresa"></param>
+            <param name="sCodUbicacion"></param>
+            <param name="sSemana"></param>
+            <param name="tipoNomina"></param>
+        </member>
+        <member name="M:CL_Generales.CL_ReglaNegocio.CL_RnNomina.CargarReferencia(System.Data.DataSet@,System.String,System.String)">
+            <summary>
+            CargarReferencia
+            </summary>
+            <param name="oDs"></param>
+            <param name="cod_ubicacion"></param>
+            <param name="cod_semana"></param>
+        </member>
+        <member name="M:CL_Generales.CL_ReglaNegocio.CL_RnNomina.ReportePolizaManoObra(System.Data.DataSet@,System.String,System.String,System.String)">
+            <summary>
+            ReportePolizaManoObra
+            </summary>
+            <param name="oDs"></param>
+            <param name="codEmpresa"></param>
+            <param name="cod_ubicacion"></param>
+            <param name="cod_semana"></param>
+        </member>
+        <member name="M:CL_Generales.CL_ReglaNegocio.CL_RnNomina.grabarPolizaManoObra(System.Data.DataSet@,System.String,System.String,System.String,System.String,System.String,System.String)">
+            <summary>
+            grabarPolizaManoObra
+            </summary>
+            <param name="oDs"></param>
+            <param name="cod_Empresa"></param>
+            <param name="cod_Ubicacion"></param>
+            <param name="cod_Semana"></param>
+            <param name="folio"></param>
+            <param name="FechaDMYaYMD"></param>
+            <param name="referencia"></param>
+        </member>
+        <member name="M:CL_Generales.CL_ReglaNegocio.CL_RnNomina.verificarExistePolizaManoObra(System.Data.DataSet@,System.String)">
+            <summary>
+            verificarExistePolizaManoObra
+            </summary>
+            <param name="oDs"></param>
+            <param name="folioPoliza"></param>
+        </member>
+        <member name="M:CL_Generales.CL_ReglaNegocio.CL_RnNomina.grabarPolizaDescuentosPorPrestamos(System.Data.DataSet@,System.String,System.String,System.String,System.String)">
+            <summary>
+            grabarPolizaDescuentosPorPrestamos
+            </summary>
+            <param name="oDs"></param>
+            <param name="cod_Empresa"></param>
+            <param name="cod_Semana"></param>
+            <param name="tipoOrdenacion"></param>
+            <param name="FechaProceso"></param>
+        </member>
+        <member name="M:CL_Generales.CL_ReglaNegocio.CL_RnNomina.verificarExistePolizaDescuentosPorPrestamos(System.Data.DataSet@,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="oDs"></param>
+            <param name="folioPoliza"></param>
+        </member>
+        <member name="M:CL_Generales.CL_ReglaNegocio.CL_RnNomina.obtenerDatosLlenarGridCapturaDiaria(System.Data.DataSet@,System.String)">
+            <summary>
+            obtenerDatosLlenarGridCapturaDiaria
+            </summary>
+            <param name="oDs"></param>
+            <param name="filtro"></param>
+        </member>
+        <member name="M:CL_Generales.CL_ReglaNegocio.CL_RnNomina.ObtenerNomUsuarioCapturaDiaria(System.Data.DataSet@,System.String)">
+            <summary>
+            ObtenerNomUsuarioCapturaDiaria
+            </summary>
+            <param name="oDs"></param>
+            <param name="codUsuario"></param>
+        </member>
+        <member name="M:CL_Generales.CL_ReglaNegocio.CL_RnNomina.GuardarSatusImpresion(System.Data.DataSet@,System.String,System.String,System.String)">
+            <summary>
+            GuardarSatusImpresion
+            </summary>
+            <param name="oDs"></param>
+            <param name="tipo_Impresion"></param>
+            <param name="conse_Inicial"></param>
+            <param name="cod_id"></param>
+        </member>
+        <member name="M:CL_Generales.CL_ReglaNegocio.CL_RnNomina.obtenerDatosLlenarGridBaldes(System.Data.DataSet@,System.String,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="oDs"></param>
+            <param name="fec_Laborada"></param>
+            <param name="No_Cuadrilla"></param>
+        </member>
+        <member name="M:CL_Generales.CL_ReglaNegocio.CL_RnNomina.ObtenerEmpleado(System.Data.DataSet@,System.String,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="oDs"></param>
+            <param name="codEmpleado"></param>
+            <param name="digVerificador"></param>
+        </member>
+        <member name="M:CL_Generales.CL_ReglaNegocio.CL_RnNomina.WSAbcProbateos(System.Data.DataSet@,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.Decimal)">
+            <summary>
+            WSAbcProbateos
+            </summary>
+            <param name="oDs"></param>
+            <param name="opcion"></param>
+            <param name="cod_proceso"></param>
+            <param name="cod_cultivo"></param>
+            <param name="cod_actividad"></param>
+            <param name="cod_ava"></param>
+            <param name="cod_empleado"></param>
+            <param name="digito_verificador"></param>
+            <param name="estatus"></param>
+            <param name="salario_nominal"></param>
+        </member>
+        <member name="M:CL_Generales.CL_ReglaNegocio.CL_RnNomina.GrabaPdc1035_1(System.Data.DataSet@,System.String,System.String,System.String)">
+            <summary>
+            GrabaPdc1035_1
+            </summary>
+            <param name="oDs"></param>
+            <param name="codLote"></param>
+            <param name="codEmpleado"></param>
+            <param name="digVerificador"></param>
+        </member>
+        <member name="M:CL_Generales.CL_ReglaNegocio.CL_RnNomina.ObtenerDatosLiquidacionGrid(System.Data.DataSet@,System.String)">
+            <summary>
+            ObtenerDatosLiquidacionGrid
+            </summary>
+            <param name="oDs"></param>
+            <param name="codLote"></param>
+        </member>
+        <member name="M:CL_Generales.CL_ReglaNegocio.CL_RnNomina.ObtenerDatosExcelDepreciacion(System.Data.DataSet@,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="oDs"></param>
+            <param name="Ejercicio"></param>
+        </member>
+        <member name="M:CL_Generales.CL_ReglaNegocio.CL_RnNomina.ObtenerDatosExcelDepreciacionTemporada(System.Data.DataSet@,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="oDs"></param>
+            <param name="Temporada"></param>
+        </member>
+        <member name="M:CL_Generales.CL_ReglaNegocio.CL_RnNomina.LlenarComboDepreciacion(System.Data.DataSet@,System.Int32)">
+            <summary>
+            SPC05OLlenarComboDepreciacion
+            </summary>
+            <param name="oDs"></param>
+            <param name="tipo"></param>
+        </member>
+        <member name="M:CL_Generales.CL_ReglaNegocio.CL_RnNomina.WSAbcCapturaBaldes(System.Data.DataSet@,System.String,System.String,System.String,System.String,System.Int32,System.Int32,System.Int32,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="oDs"></param>
+            <param name="opcion"></param>
+            <param name="cod_lote"></param>
+            <param name="cod_ranch"></param>
+            <param name="cod_ubicacion"></param>
+            <param name="proyec_baldes"></param>
+            <param name="corte_baldes"></param>
+            <param name="cajas"></param>
+        </member>
+        <member name="M:CL_Generales.CL_ReglaNegocio.CL_RnNomina.ObtLotsPlaneacionActividades(System.Data.DataSet@,System.String,System.String)">
+            <summary>
+            WSObtLotsPlaneacionActividades
+            </summary>
+            <param name="oDs"></param>
+            <param name="CodLote"></param>
+        </member>
+        <member name="M:CL_Generales.CL_ReglaNegocio.CL_RnNomina.WSUpdatePresupuesto(System.Data.DataSet@,System.String,System.String,System.String,System.String,System.String,System.String,System.String)">
+            <summary>
+            WSUpdatePresupuesto
+            </summary>
+            <param name="oDs"></param>
+            <param name="columna"></param>
+            <param name="value"></param>
+            <param name="cod_lote"></param>
+            <param name="cod_Actividad"></param>
+            <param name="cod_Avance"></param>
+            <param name="No_semana"></param>
+            <param name="Administrador"></param>
+        </member>
+        <member name="M:CL_Generales.CL_ReglaNegocio.CL_RnNomina.WSObtenerLotesUsuario(System.Data.DataSet@,System.String)">
+            <summary>
+            WSObtLotePorUsuario
+            </summary>
+            <param name="oDs"></param>
+            <param name="cve_Usuario"></param>
+        </member>
+        <member name="M:CL_Generales.CL_ReglaNegocio.CL_RnNomina.WSObtenerSemana(System.Data.DataSet@,System.String)">
+            <summary>
+            WSObtenerSemana
+            </summary>
+            <param name="oDs"></param>
+            <param name="No_Semana"></param>
+        </member>
+        <member name="M:CL_Generales.CL_ReglaNegocio.CL_RnNomina.WSABCUsuario(System.Data.DataSet@,System.Int32,System.Int32,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String)">
+            <summary>
+            WSAbcUsuarios
+            </summary>
+            <param name="oDs"></param>
+            <param name="opcion"></param>
+            <param name="id"></param>
+            <param name="usuario"></param>
+            <param name="password"></param>
+            <param name="cod_empleado"></param>
+            <param name="digito_verificador"></param>
+            <param name="estatus"></param>
+            <param name="tipo_permiso"></param>
+            <param name="vUbicacion"></param>
+            <param name="permReportes"></param>
+        </member>
+        <member name="M:CL_Generales.CL_ReglaNegocio.CL_RnNomina.WSObtenerUsuarios(System.Data.DataSet@,System.Int32)">
+            <summary>
+            WSObtenerUsuarios
+            </summary>
+            <param name="oDs"></param>
+            <param name="id"></param>
+        </member>
+        <member name="M:CL_Generales.CL_ReglaNegocio.CL_RnNomina.WSObtLotsAsignarUsuario(System.Data.DataSet@)">
+            <summary>
+            WSObtLotsAsignarUsuario
+            </summary>
+            <param name="oDs"></param>
+        </member>
+        <member name="M:CL_Generales.CL_ReglaNegocio.CL_RnNomina.WSABCLotesUsuarios(System.Data.DataSet@,System.Int32,System.Int32,System.String,System.String)">
+            <summary>
+            WSABCLotesUsuarios
+            </summary>
+            <param name="oDs"></param>
+            <param name="opcion"></param>
+            <param name="cod_usuario"></param>
+            <param name="cod_lote"></param>
+            <param name="estatus"></param>
+        </member>
+        <member name="M:CL_Generales.CL_ReglaNegocio.CL_RnNomina.WSInicioSesion(System.Data.DataSet@,System.String,System.String)">
+            <summary>
+            WSInicioSesion
+            </summary>
+            <param name="oDs"></param>
+            <param name="usuario"></param>
+            <param name="password"></param>
+        </member>
+        <member name="M:CL_Generales.CL_ReglaNegocio.CL_RnNomina.WSCargarCombosActAdicional(System.Data.DataSet@)">
+            <summary>
+            WSCargarCombosActAdicional
+            </summary>
+            <param name="oDs"></param>
+        </member>
+        <member name="M:CL_Generales.CL_ReglaNegocio.CL_RnNomina.WSObtenerActividadAdicionar(System.Data.DataSet@,System.String,System.String,System.String)">
+            <summary>
+            WSObtenerActividadAdicionar
+            </summary>
+            <param name="oDs"></param>
+            <param name="cod_lote"></param>
+            <param name="cod_actividad"></param>
+            <param name="cod_avance"></param>
+        </member>
+        <member name="M:CL_Generales.CL_ReglaNegocio.CL_RnNomina.WSAgregarActSinPresupuestar(System.Data.DataSet@,System.String,System.String,System.String,System.String)">
+            <summary>
+            WSAgregarActSinPresupuestar
+            </summary>
+            <param name="oDs"></param>
+            <param name="cod_lote"></param>
+            <param name="cod_actividad"></param>
+            <param name="cod_avance"></param>
+            <param name="No_semana"></param>
+        </member>
+        <member name="M:CL_Generales.CL_ReglaNegocio.CL_RnNomina.WSObtActAutorizar(System.Data.DataSet@,System.String,System.String)">
+            <summary>
+            WSObtActAutorizar
+            </summary>
+            <param name="oDs"></param>
+            <param name="cod_lote"></param>
+            <param name="No_Semana"></param>
+        </member>
+        <member name="M:CL_Generales.CL_ReglaNegocio.CL_RnNomina.WSAutorizarRechazar(System.Data.DataSet@,System.Int32,System.String,System.String,System.String,System.String)">
+            <summary>
+            WSAutorizarRechazar
+            </summary>
+            <param name="oDs"></param>
+            <param name="opcion"></param>
+            <param name="cod_lote"></param>
+            <param name="cod_actividad"></param>
+            <param name="cod_avance"></param>
+            <param name="No_Semana"></param>
+        </member>
+        <member name="M:CL_Generales.CL_ReglaNegocio.CL_RnNomina.WSObtEncabezadoAutorizar(System.Data.DataSet@,System.String,System.String)">
+            <summary>
+            WSObtEncabezadoAutorizar
+            </summary>
+            <param name="oDs"></param>
+            <param name="cod_lote"></param>
+            <param name="No_Semana"></param>
+        </member>
+        <member name="M:CL_Generales.CL_ReglaNegocio.CL_RnNomina.WSObtIndicesLotes(System.Data.DataSet@,System.String,System.String)">
+            <summary>
+            WSObtIndicesLotes
+            </summary>
+            <param name="oDs"></param>
+            <param name="cod_lote"></param>
+            <param name="No_Semana"></param>
+        </member>
+        <member name="M:CL_Generales.CL_ReglaNegocio.CL_RnNomina.WSAdicionarJornalExtra(System.Data.DataSet@,System.String,System.String,System.String,System.String,System.String,System.String)">
+            <summary>
+            WSAdicionarJornalExtra
+            </summary>
+            <param name="oDs"></param>
+            <param name="value"></param>
+            <param name="cod_lote"></param>
+            <param name="cod_Actividad"></param>
+            <param name="cod_Avance"></param>
+            <param name="No_semana"></param>
+        </member>
+        <member name="M:CL_Generales.CL_ReglaNegocio.CL_RnNomina.WSCopiarJornales(System.Data.DataSet@,System.String,System.String,System.String,System.String,System.String,System.String,System.String)">
+            <summary>
+            WSCopiarJornales
+            </summary>
+            <param name="oDs"></param>
+            <param name="opcion"></param>
+            <param name="Cod_Lote"></param>
+            <param name="Cod_actividad"></param>
+            <param name="Cod_Avance"></param>
+            <param name="No_Semana"></param>
+            <param name="Cod_Temporada"></param>
+        </member>
+        <member name="M:CL_Generales.CL_ReglaNegocio.CL_RnNomina.WSNotificacionesPendientes(System.Data.DataSet@,System.String)">
+            <summary>
+            WSNotificacionesPendientes
+            </summary>
+            <param name="oDs"></param>
+            <param name="No_Semana"></param>
+        </member>
+        <member name="M:CL_Generales.CL_ReglaNegocio.CL_RnNomina.WSObtenerMaximoJornalesDisponibles(System.Data.DataSet@,System.String,System.String,System.String,System.String,System.String)">
+            <summary>
+            WSObtenerMaximoJornalesDisponibles
+            </summary>
+            <param name="oDs"></param>
+            <param name="cod_lote"></param>
+            <param name="cod_actividad"></param>
+            <param name="cod_avance"></param>
+            <param name="No_Semana"></param>
+            <param name="Cod_temporada"></param>
+        </member>
+        <member name="M:CL_Generales.CL_ReglaNegocio.CL_RnNomina.WSObtenerMaximoPresupuestoDisponible(System.Data.DataSet@,System.String,System.String,System.String,System.String,System.String)">
+            <summary>
+            WSObtenerMaximoJornalesDisponibles
+            </summary>
+            <param name="oDs"></param>
+            <param name="cod_lote"></param>
+            <param name="cod_actividad"></param>
+            <param name="cod_avance"></param>
+            <param name="No_Semana"></param>
+            <param name="Cod_temporada"></param>
+        </member>
+        <member name="M:CL_Generales.CL_ReglaNegocio.CL_RnNomina.WSTraspasoJornales(System.Data.DataSet@,System.Double,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String)">
+            <summary>
+            WSTraspasoJornales
+            </summary>
+            <param name="oDs"></param>
+            <param name="cantJorTras"></param>
+            <param name="diaTraspaso"></param>
+            <param name="No_semana"></param>
+            <param name="dCod_lote"></param>
+            <param name="dCod_Act"></param>
+            <param name="dCod_Ava"></param>
+            <param name="aCod_lote"></param>
+            <param name="aCod_Act"></param>
+            <param name="aCod_Ava"></param>
+            <param name="usuarioAutoriza"></param>
+        </member>
+        <member name="M:CL_Generales.CL_ReglaNegocio.CL_RnNomina.WSTraspasoPresupuesto(System.Data.DataSet@,System.Double,System.String,System.String,System.String,System.String,System.String,System.String,System.String)">
+            <summary>
+            WSTraspasoPresupuesto
+            </summary>
+            <param name="oDs"></param>
+            <param name="cantJorTras"></param>
+            <param name="dCod_lote"></param>
+            <param name="dCod_Act"></param>
+            <param name="dCod_Ava"></param>
+            <param name="aCod_lote"></param>
+            <param name="aCod_Act"></param>
+            <param name="aCod_Ava"></param>
+            <param name="usuarioAutoriza"></param>
+        </member>
+        <member name="M:CL_Generales.CL_ReglaNegocio.CL_RnNomina.WSObtenerTemporadasCMB(System.Data.DataSet@)">
+            <summary>
+            WSObtenerTemporadasCMB
+            </summary>
+            <param name="oDs"></param>
+        </member>
+        <member name="M:CL_Generales.CL_ReglaNegocio.CL_RnNomina.SPC11_AcumuladoSemana_Actual(System.Data.DataSet@,System.String,System.String,System.String,System.String)">
+            <summary>
+            SPC11_AcumuladoSemana_Actual
+            </summary>
+            <param name="oDs"></param>
+            <param name="cod_temporada"></param>
+            <param name="fechaIni"></param>
+            <param name="fechaFin"></param>
+            <param name="cod_lote"></param>
+        </member>
+        <member name="M:CL_Generales.CL_ReglaNegocio.CL_RnNomina.WSObtCostosDeProduccion(System.Data.DataSet@,System.String,System.String,System.String)">
+            <summary>
+            WSObtCostosDeProduccion
+            </summary>
+            <param name="oDs"></param>
+            <param name="cod_lote"></param>
+            <param name="semanaIni"></param>
+            <param name="semanaFin"></param>
+        </member>
+        <member name="M:CL_Generales.CL_ReglaNegocio.CL_RnNomina.WSGeneraTmpRPTCostos(System.Data.DataSet@,System.String,System.String,System.String,System.String)">
+            <summary>
+            Genera reporte y lo guarda en la tabla TmpReporte temporal
+            </summary>
+            <param name="oDs"></param>
+            <param name="semana"></param>
+            <param name="semana2"></param>
+            <param name="cod_ubicacion"></param>
+            <param name="cod_lote"></param>
+        </member>
+        <member name="M:CL_Generales.CL_ReglaNegocio.CL_RnNomina.SPC06_GeneraRptCostosdeProduccion_xHA_CA(System.Data.DataSet@,System.String,System.String,System.String,System.String)">
+            <summary>
+            SPC06_GeneraRptCostosdeProduccion_xHA_CA
+            </summary>
+            <param name="oDs"></param>
+            <param name="opcion"></param>
+            <param name="semana"></param>
+            <param name="cod_ubicacion"></param>
+            /// <param name="cod_lote"></param>
+        </member>
+        <member name="M:CL_Generales.CL_ReglaNegocio.CL_RnNomina.spc03_combustibleRendimiento(System.Data.DataSet@,System.String,System.String,System.String,System.String,System.String)">
+            <summary>
+            spc03_combustibleRendimiento
+            </summary>
+            <param name="oDs"></param>
+            <param name="temporada"></param>
+            <param name="semanaIni"></param>
+            <param name="semanaFin"></param>
+            <param name="tabla"></param>
+            <param name="ubicacion"></param>
+        </member>
+        <member name="M:CL_Generales.CL_ReglaNegocio.CL_RnNomina.SPC03_CombustibleRendimientosRango(System.Data.DataSet@,System.String,System.String,System.String,System.String,System.String)">
+            <summary>
+            SPC03_CombustibleRendimientosRango
+            </summary>
+            <param name="oDs"></param>
+            <param name="temporada"></param>
+            <param name="semanaIni"></param>
+            <param name="semanaFin"></param>
+            <param name="tabla"></param>
+            <param name="ubicacion"></param>
+        </member>
+        <member name="M:CL_Generales.CL_ReglaNegocio.CL_RnNomina.spAP_ConsultaFaturas(System.Data.DataSet@,System.String,System.String,System.Int32)">
+            <summary>
+            
+            </summary>
+            <param name="oDs"></param>
+            <param name="fechaIni"></param>
+            <param name="fechaFin"></param>
+            <param name="Opcion"></param>
+        </member>
+        <member name="M:CL_Generales.CL_ReglaNegocio.CL_RnNomina.spc10_rptSalariosRepetidos(System.Data.DataSet@,System.String,System.String)">
+            <summary>
+            spc10_rptSalariosRepetidos
+            </summary>
+            <param name="oDs"></param>
+            <param name="No_Semana"></param>
+            <param name="diasRep"></param>
+        </member>
+        <member name="M:CL_Generales.CL_ReglaNegocio.CL_RnNomina.FC10Calcula_IMSSNormal_Prueba(System.Data.DataSet@,System.Double,System.Double)">
+            <summary>
+            
+            </summary>
+            <param name="oDs"></param>
+            <param name="salario"></param>
+            <param name="dias"></param>
+        </member>
+        <member name="M:CL_Generales.CL_ReglaNegocio.CL_RnNomina.FC10Calcula_ISPT_Prueba(System.Data.DataSet@,System.Double,System.Double)">
+            <summary>
+            
+            </summary>
+            <param name="oDs"></param>
+            <param name="salario"></param>
+            <param name="dias"></param>
+        </member>
+        <member name="M:CL_Generales.CL_ReglaNegocio.CL_RnNomina.SPC10_ConsultaDeclaracionErogaciones(System.Data.DataSet@,System.String,System.String,System.String,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="oDs"></param>
+            <param name="semanaInicial"></param>
+            <param name="semanaFinal"></param>
+            <param name="periodo"></param>
+            <param name="year"></param>
+        </member>
+        <member name="M:CL_Generales.CL_ReglaNegocio.CL_RnNomina.imprimirPolizaGLDiario(System.Data.DataSet@,System.String,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="oDs"></param>
+            <param name="lote"></param>
+            <param name="tabla"></param>
+        </member>
+        <member name="M:CL_Generales.CL_ReglaNegocio.CL_RnNomina.obtenerPolizasSinGuardar(System.Data.DataSet@)">
+            <summary>
+            
+            </summary>
+            <param name="oDs"></param>
+        </member>
+        <member name="M:CL_Generales.CL_ReglaNegocio.CL_RnNomina.obtenerPolizasDepositoSinGuardar(System.Data.DataSet@)">
+            <summary>
+            
+            </summary>
+            <param name="oDs"></param>
+        </member>
+        <member name="M:CL_Generales.CL_ReglaNegocio.CL_RnNomina.obtenerTablaPolizaDeposito(System.Data.DataSet@,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="oDs"></param>
+            <param name="tabla"></param>
+        </member>
+        <member name="M:CL_Generales.CL_ReglaNegocio.CL_RnNomina.generaPolizaDeposito(System.Data.DataSet@,System.String,System.String,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="oDs"></param>
+            <param name="LoteIni"></param>
+            <param name="LoteFin"></param>
+            <param name="tabla"></param>
+        </member>
+        <member name="M:CL_Generales.CL_ReglaNegocio.CL_RnNomina.obtenerTablaPolizaPagos(System.Data.DataSet@)">
+            <summary>
+            
+            </summary>
+            <param name="oDs"></param>
+            <param name="tabla"></param>
+        </member>
+        <member name="M:CL_Generales.CL_ReglaNegocio.CL_RnProveedores.WSAbcUsuariosProveedores(System.Data.DataSet@,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String)">
+            <summary>
+            Metodo WSAbcUsuariosProveedores
+            </summary>
+            //(@opcion int, @idUsuario int, @RFC varchar(30),@razonSocial varchar(300), @password varchar(60), @email varchar(200), @nombreContacto varchar(1), @estatus varchar(2))
+        </member>
+        <member name="M:CL_Generales.CL_ReglaNegocio.CL_RnProveedores.WSAbcGeneraRecibosProveedores(System.Data.DataSet@,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String)">
+            <summary>
+            WSAbcGeneraRecibosProveedores
+            </summary>
+            <param name="oDs"></param>
+            <param name="opcion"></param>
+            <param name="idOrdenCompra"></param>
+            <param name="RFC"></param>
+            <param name="UsoCFDI"></param>
+            <param name="total"></param>
+            <param name="moneda"></param>
+            <param name="UUID"></param>
+            <param name="Folio"></param>
+        </member>
+        <member name="M:CL_Generales.CL_ReglaNegocio.CL_RnProveedores.WSSPAP_EstadoCuenta(System.Data.DataSet@,System.String,System.String,System.String,System.String)">
+            <summary>
+            WSSPAP_EstadoCuenta
+            </summary>
+            <param name="oDs"></param>
+            <param name="sRfc"></param>
+            <param name="sMoneda"></param>
+            <param name="sFechaInicial"></param>
+            <param name="sFechaFinal"></param>
+        </member>
+        <member name="M:CL_Generales.CL_ReglaNegocio.CL_RnProveedores.SPPO_ObtCabeceroFacturas(System.Data.DataSet@,System.String,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="oDs"></param>
+            <param name="fechaInicial"></param>
+            <param name="fechaFinal"></param>
+        </member>
+        <member name="M:CL_Generales.CL_ReglaNegocio.CL_RnProveedores.SPPO_REVISADOORDENES(System.Data.DataSet@,System.String,System.String,System.String,System.String)">
+            <summary>
+            SPPO_REVISADOORDENES
+            </summary>
+            <param name="oDs"></param>
+            <param name="opcion"></param>
+            <param name="folio"></param>
+            <param name="idOrden"></param>
+        </member>
+        <member name="M:CL_Generales.CL_ReglaNegocio.CL_RnProveedores.SPAP_ENVIOCORREOSINVITACIONPORTALPROVEEDORES(System.Data.DataSet@,System.String,System.String)">
+            <summary>
+            ENVIO CORREOS PARA INVITAR A PROVEEDORES A USAR LA PLATAFORMA
+            </summary>
+            <param name="oDs"></param>
+            <param name="opcion"></param>
+            <param name="vend_no"></param>
+            
+        </member>
+        <member name="M:CL_Generales.CL_ReglaNegocio.CL_RnProveedores.SPIM_EntradasPendientesXProveedor(System.Data.DataSet@,System.String,System.String,System.Int32,System.String,System.String)">
+            <summary>
+            SPIM_EntradasPendientesXProveedor
+            </summary>
+            <param name="oDs"></param>
+            <param name="cuentaContable"></param>
+            <param name="vend_no"></param>
+            <param name="fecha"></param>
+            <param name="tablaTemp"></param>
+            <param name="loc"></param>
+        </member>
+        <member name="M:CL_Generales.CL_ReglaNegocio.CL_RnProveedores.SPAP_SaldoProveedoresMensualEnArchivorRepOrigProv(System.Data.DataSet@,System.Int32,System.Int32,System.String)">
+            <summary>
+            SPAP_SaldoProveedoresMensualEnArchivorRepOrigProv
+            </summary>
+            <param name="oDs"></param>
+            <param name="FechaIniPeriodo"></param>
+            <param name="FechaFinPeriodo"></param>
+            <param name="FileTmp"></param>
+        </member>
+        <member name="M:CL_Generales.CL_ReglaNegocio.CL_RnProveedores.SPGL_EstadoFinacieroProveedores(System.Data.DataSet@,System.String,System.String)">
+            <summary>
+            SPGL_EstadoFinacieroProveedores
+            </summary>
+            <param name="oDs"></param>
+            <param name="periodo"></param>
+            <param name="FileTmp"></param>
+        </member>
+        <member name="M:CL_Generales.CL_ReglaNegocio.CL_RnProveedores.SPIM_ConsultaTablaEntradaPendientes(System.Data.DataSet@,System.String,System.Int32)">
+             <summary>
+             Consultar Rep. Original Recepcion       _EntPend
+             </summary>
+             <param name="oDs"></param>
+            
+        </member>
+        <member name="M:CL_Generales.CL_ReglaNegocio.CL_RnProveedores.WSObtenerProductores(System.Data.DataSet@)">
+            <summary>
+            
+            </summary>
+            <param name="oDs"></param>
+            <param name="opcion"></param>
+            <param name="fecha"></param>
+        </member>
+        <member name="M:CL_Generales.CL_ReglaNegocio.CL_RnProveedores.WSObtenerUbicaciones(System.Data.DataSet@)">
+            <summary>
+            
+            </summary>
+            <param name="oDs"></param>
+        </member>
+        <member name="M:CL_Generales.CL_ReglaNegocio.CL_RnProveedores.WSObtenerTablasProduccionDiaria(System.Data.DataSet@,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="oDs"></param>
+            <param name="opcion"></param>
+        </member>
+        <member name="M:CL_Generales.CL_ReglaNegocio.CL_RnProveedores.WSGenerarTablasProduccionDiaria(System.Data.DataSet@,System.String,System.String,System.String,System.String,System.String,System.String,System.String)">
+            <summary>
+            WSGenerarTablasProduccionDiaria
+            </summary>
+            <param name="oDs"></param>
+            <param name="tipo"></param>
+            <param name="fecha"></param>
+            <param name="cod_ubicacion"></param>
+            <param name="cod_productor"></param>
+            <param name="cod_cultivo"></param>
+            <param name="cod_etiqueta"></param>
+            <param name="cod_presentacion"></param>
+        </member>
+        <member name="F:CL_Generales.frmBuscador.iNumOpcion">
+            <summary>
+            Variable del número de opción
+            </summary>
+        </member>
+        <member name="F:CL_Generales.frmBuscador.sNumCodigo">
+            <summary>
+            Variable que retorna el número de código seleccionado en el contenedor del buscador
+            </summary>
+        </member>
+        <member name="F:CL_Generales.frmBuscador.sDescripcion">
+            <summary>
+            Variable que retorna la descripción seleccionada en el contenedor del buscador
+            </summary>
+        </member>
+        <member name="F:CL_Generales.frmBuscador.sUsuario">
+            <summary>
+            Variable sUsuario
+            </summary>
+        </member>
+        <member name="F:CL_Generales.frmBuscador.iNumConexion">
+            <summary>
+            Variable iNumConexion
+            </summary>
+        </member>
+        <member name="F:CL_Generales.frmBuscador.sCodDependiente">
+            <summary>
+            Variable sCodDependiente
+            </summary>
+        </member>
+        <member name="P:CL_Generales.frmBuscador.sCodigo">
+            <summary>
+            Variable NumCodigo
+            </summary>
+        </member>
+        <member name="P:CL_Generales.frmBuscador.sDesc">
+            <summary>
+            Variable Descripcion
+            </summary>
+        </member>
+        <member name="M:CL_Generales.frmBuscador.#ctor(System.Int32,System.Int32,System.String,System.String,System.String,System.String)">
+            <summary>
+            Método para llamar el formulario frmBuscador
+            </summary>
+            <param name="iOpcion">Número de opción</param>
+            <param name="iIdConn">Número de conexión</param>
+            <param name="sCodUsuario">Código de usuario</param>
+            <param name="sCodigo">Código</param>
+            <param name="sDescrip">Descripción</param>
+            <param name="sNumDependiente">Número de dependencia</param>
+        </member>
+        <member name="M:CL_Generales.frmBuscador.ObtenerBuscar(System.String,System.String,System.String)">
+            <summary>
+            Método para obtener los datos del buscar
+            </summary>
+            <param name="sNumCodigo">Número de código</param>
+            <param name="sDescripcion">Descripción del código</param>
+            <param name="sUsuario">Código del usuario</param>
+        </member>
+        <member name="M:CL_Generales.frmBuscador.ObtenerRegistroGrid">
+            <summary>
+            Método para obtener los registros del grid de busqueda
+            </summary>
+        </member>
+        <member name="F:CL_Generales.frmBuscador.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:CL_Generales.frmBuscador.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:CL_Generales.frmBuscador.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="T:CL_Generales.frmCatalogo">
+            <summary>
+            Formulario base de catálogos
+            </summary>
+        </member>
+        <member name="F:CL_Generales.frmCatalogo.iNumOpcion">
+            <summary>
+            Variable iNumOpciones del formulario frmCatalogo
+            </summary>
+        </member>
+        <member name="F:CL_Generales.frmCatalogo.sNumCodigo">
+            <summary>
+            Variable sNumCodigo del formulario frmCatalogo
+            </summary>
+        </member>
+        <member name="F:CL_Generales.frmCatalogo.sDescripcion">
+            <summary>
+            Variable sDescripcion del formulario frmCatalogo
+            </summary>
+        </member>
+        <member name="F:CL_Generales.frmCatalogo._sTipoMov">
+            <summary>
+            Variable _sTipoMov del formulario frmCatalogo
+            </summary>
+        </member>
+        <member name="F:CL_Generales.frmCatalogo._bFuncionaMenu">
+            <summary>
+            Variable _bFuncionaMenu del formulario frmCatalogo
+            </summary>
+        </member>
+        <member name="P:CL_Generales.frmCatalogo.FuncionMenu">
+            <summary>
+            Variable FuncionMenu
+            </summary>
+        </member>
+        <member name="P:CL_Generales.frmCatalogo.FuncionaSimple">
+            <summary>
+            Variable FuncionMenu
+            </summary>
+        </member>
+        <member name="P:CL_Generales.frmCatalogo.TipoMovimiento">
+            <summary>
+            Variable TipoMovimiento
+            </summary>
+        </member>
+        <member name="P:CL_Generales.frmCatalogo.OpcionCatalogo">
+            <summary>
+            Variable OpcionCatalogo
+            </summary>
+        </member>
+        <member name="P:CL_Generales.frmCatalogo.NumCodigo">
+            <summary>
+            Variable NumCodigo
+            </summary>
+        </member>
+        <member name="P:CL_Generales.frmCatalogo.Descripcion">
+            <summary>
+            Variable Descripcion
+            </summary>
+        </member>
+        <member name="M:CL_Generales.frmCatalogo.vNuevo">
+            <summary>
+            Método virtual para el llamado del evento click del boton nuevo
+            </summary>
+        </member>
+        <member name="M:CL_Generales.frmCatalogo.vEditar">
+            <summary>
+            Método virtual para el llamado del evento click del boton editar
+            </summary>
+        </member>
+        <member name="M:CL_Generales.frmCatalogo.vDeshacer">
+            <summary>
+            Método virtual para el llamado del evento click del boton deshacer
+            </summary>
+        </member>
+        <member name="M:CL_Generales.frmCatalogo.vEliminar">
+            <summary>
+            Método virtual para el llamado del evento click del boton eliminar
+            </summary>
+        </member>
+        <member name="M:CL_Generales.frmCatalogo.vGuardar">
+            <summary>
+            Método virtual para el llamado del evento click del boton guardar
+            </summary>
+        </member>
+        <member name="M:CL_Generales.frmCatalogo.vBuscar">
+            <summary>
+            Método virtual para el llamado del evento click del boton buscar
+            </summary>
+        </member>
+        <member name="M:CL_Generales.frmCatalogo.vImprimir">
+            <summary>
+            Método virtual para el llamado del evento click del boton imprimir
+            </summary>
+        </member>
+        <member name="M:CL_Generales.frmCatalogo.vExcel">
+            <summary>
+            Método virtual para el llamado del evento click del boton excel
+            </summary>
+        </member>
+        <member name="M:CL_Generales.frmCatalogo.vPdf">
+            <summary>
+            Método virtual para el llamado del evento click del boton pdf
+            </summary>
+        </member>
+        <member name="M:CL_Generales.frmCatalogo.vSalir">
+            <summary>
+            Método virtual para el llamado del evento click del boton salir
+            </summary>
+        </member>
+        <member name="M:CL_Generales.frmCatalogo.vAgregar">
+            <summary>
+            Método virtual para el llamado del evento click del botno agregar
+            </summary>
+        </member>
+        <member name="M:CL_Generales.frmCatalogo.vMinimizar">
+            <summary>
+            Método virtual para el llamado del evento click del boton minimizar
+            </summary>
+        </member>
+        <member name="M:CL_Generales.frmCatalogo.#ctor">
+            <summary>
+            Método de inicialización del frmCatalogo
+            </summary>
+        </member>
+        <member name="M:CL_Generales.frmCatalogo.OcultarControlesMenu(System.Boolean,System.Boolean,System.Boolean,System.Boolean,System.Boolean,System.Boolean,System.Boolean,System.Boolean,System.Boolean,System.Boolean)">
+            <summary>
+            Método para ocultar controles menú
+            </summary>
+            <param name="bNuevo">Si es true aparece visible el control, si es false desaparece el control</param>
+            <param name="bEditar">Si es true aparece visible el control, si es false desaparece el control</param>
+            <param name="bDeshacer">Si es true aparece visible el control, si es false desaparece el control</param>
+            <param name="bEliminar">Si es true aparece visible el control, si es false desaparece el control</param>
+            <param name="bGuardar">Si es true aparece visible el control, si es false desaparece el control</param>
+            <param name="bBuscar">Si es true aparece visible el control, si es false desaparece el control</param>
+            <param name="bImprimir">Si es true aparece visible el control, si es false desaparece el control</param>
+            <param name="bExcel">Si es true aparece visible el control, si es false desaparece el control</param>
+            <param name="bPdf">Si es true aparece visible el control, si es false desaparece el control</param>
+        </member>
+        <member name="M:CL_Generales.frmCatalogo.MostrarFormularioBusqueda">
+            <summary>
+            Método para levantar el formulario de busqueda
+            </summary>
+        </member>
+        <member name="M:CL_Generales.frmCatalogo.HabilitarControlesMenu(System.Boolean,System.Boolean,System.Boolean,System.Boolean,System.Boolean,System.Boolean,System.Boolean,System.Boolean,System.Boolean,System.Boolean,System.Boolean)">
+            <summary>
+            Método para habilitar los controles del ménu de catálogos
+            </summary>
+            <param name="bSalir">True - Habilita el control salir, False - Deshabilita el control salir</param>
+            <param name="bNuevo">True - Habilita el control nuevo, False - Deshabilita el control nuevo</param>
+            <param name="bEditar">True - Habilita el control editar, False - Deshabilita el control editar</param>
+            <param name="bDeshacer">True - Habilita el control deshacer, False - Deshabilita el control deshacer</param>
+            <param name="bEliminar">True - Habilita el control eliminar, False - Deshabilita el control eliminar</param>
+            <param name="bGuardar">True - Habilita el control guardar, False - Deshabilita el control guardar</param>
+            <param name="bBuscar">True - Habilita el control buscar, False - Deshabilita el control buscar</param>
+            <param name="bImprimir">True - Habilita el control imprimir, False - Deshabilita el control imprimir</param>
+            <param name="bExcel">True - Habilita el control excel, False - Deshabilita el control excel</param>
+            <param name="bPdf">True - Habilita el control pdf, False - Deshabilita el control pdf</param>
+        </member>
+        <member name="M:CL_Generales.frmCatalogo.ValidarSalir">
+            <summary>
+            Método para validar el cierre del formulario
+            </summary>
+        </member>
+        <member name="M:CL_Generales.frmCatalogo.ValidaElimina">
+            <summary>
+            Método para validar si desea eliminarlo y ejecuta el método vEliminar
+            </summary>
+        </member>
+        <member name="M:CL_Generales.frmCatalogo.tsCatalogo_KeyUp(System.Object,System.Windows.Forms.KeyEventArgs)">
+            <summary>
+            Evento del formulario frmCatalogo para el manejo del acceso con el teclado
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="F:CL_Generales.frmCatalogo.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:CL_Generales.frmCatalogo.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:CL_Generales.frmCatalogo.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="F:CL_Generales.frmPrueba.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:CL_Generales.frmPrueba.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:CL_Generales.frmPrueba.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="T:CL_Generales.frmReporte">
+            <summary>
+            Formulario base de reporte
+            </summary>
+        </member>
+        <member name="F:CL_Generales.frmReporte.iNumOpcion">
+            <summary>
+            Variable iNumOpciones del formulario frmReporte
+            </summary>
+        </member>
+        <member name="F:CL_Generales.frmReporte.iIdConexion">
+            <summary>
+            Variable iIdConexion
+            </summary>
+        </member>
+        <member name="F:CL_Generales.frmReporte.sNumCodigo">
+            <summary>
+            Variable sNumCodigo del formulario frmReporte
+            </summary>
+        </member>
+        <member name="F:CL_Generales.frmReporte.sDescripcion">
+            <summary>
+            Variable sDescripcion del formulario frmReporte
+            </summary>
+        </member>
+        <member name="F:CL_Generales.frmReporte._bFuncionaMenu">
+            <summary>
+            Variable _bFuncionaMenu del formulario frmReporte
+            </summary>
+        </member>
+        <member name="P:CL_Generales.frmReporte.FuncionMenu">
+            <summary>
+            Variable FuncionMenu
+            </summary>
+        </member>
+        <member name="P:CL_Generales.frmReporte.NumCodigo">
+            <summary>
+            Variable NumCodigo
+            </summary>
+        </member>
+        <member name="P:CL_Generales.frmReporte.Descripcion">
+            <summary>
+            Variable Descripcion
+            </summary>
+        </member>
+        <member name="M:CL_Generales.frmReporte.vProcesar">
+            <summary>
+            Método vProcesar
+            </summary>
+        </member>
+        <member name="M:CL_Generales.frmReporte.vDeshacer">
+            <summary>
+            Método vDeshacer
+            </summary>
+        </member>
+        <member name="M:CL_Generales.frmReporte.vBuscar">
+            <summary>
+            Método vBuscar
+            </summary>
+        </member>
+        <member name="M:CL_Generales.frmReporte.vImprimir">
+            <summary>
+            Método vImprimir
+            </summary>
+        </member>
+        <member name="M:CL_Generales.frmReporte.vExcel">
+            <summary>
+            Método vExcel
+            </summary>
+        </member>
+        <member name="M:CL_Generales.frmReporte.vPdf">
+            <summary>
+            Método vPdf
+            </summary>
+        </member>
+        <member name="M:CL_Generales.frmReporte.vSalir">
+            <summary>
+            Método vSalir
+            </summary>
+        </member>
+        <member name="M:CL_Generales.frmReporte.vMinimizar">
+            <summary>
+            Método vMinimizar
+            </summary>
+        </member>
+        <member name="M:CL_Generales.frmReporte.#ctor">
+            <summary>
+            Método de inicialización del frmReporte
+            </summary>
+        </member>
+        <member name="M:CL_Generales.frmReporte.OcultarControlesMenu(System.Boolean,System.Boolean,System.Boolean,System.Boolean,System.Boolean,System.Boolean,System.Boolean,System.Boolean)">
+            <summary>
+            Método para ocultar controles menú del formulario frmReporte
+            </summary>
+            <param name="bProcesar">Si es true aparece visible el control, si es false desaparece el control</param>
+            <param name="bDeshacer">Si es true aparece visible el control, si es false desaparece el control</param>
+            <param name="bEliminar">Si es true aparece visible el control, si es false desaparece el control</param>
+            <param name="bGuardar">Si es true aparece visible el control, si es false desaparece el control</param>
+            <param name="bBuscar">Si es true aparece visible el control, si es false desaparece el control</param>
+            <param name="bImprimir">Si es true aparece visible el control, si es false desaparece el control</param>
+            <param name="bExcel">Si es true aparece visible el control, si es false desaparece el control</param>
+            <param name="bPdf">Si es true aparece visible el control, si es false desaparece el control</param>
+        </member>
+        <member name="M:CL_Generales.frmReporte.HabilitarControlesMenu(System.Boolean,System.Boolean,System.Boolean,System.Boolean,System.Boolean,System.Boolean,System.Boolean)">
+            <summary>
+            Método habilitar los controles del menú del formulario frmReporte
+            </summary>
+            <param name="bSalir">True - Habilita el control salir, False - Deshabilita el control salir</param>
+            <param name="bProcesar">True - Habilita el control procesar, False - Deshabilita el control procesar</param>
+            <param name="bDeshacer">True - Habilita el control deshacer, False - Deshabilita el control deshacer</param>
+            <param name="bBuscar">True - Habilita el control buscar, False - Deshabilita el control buscar</param>
+            <param name="bImprimir">True - Habilita el control imprimir, False - Deshabilita el control imprimir</param>
+            <param name="bExcel">True - Habilita el control excel, False - Deshabilita el control excel</param>
+            <param name="bPdf">True - Habilita el control pdf, False - Deshabilita el control pdf</param>
+        </member>
+        <member name="M:CL_Generales.frmReporte.Procesar_Click(System.Object,System.EventArgs)">
+            <summary>
+            Método para levantar el formulario de busqueda
+            </summary>
+        </member>
+        <member name="M:CL_Generales.frmReporte.tsReporte_KeyUp(System.Object,System.Windows.Forms.KeyEventArgs)">
+            <summary>
+            Evento del formulario frmReporte para el manejo del acceso con el teclado
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:CL_Generales.frmReporte.ValidarSalir">
+            <summary>
+            Método para validar el cierre del formulario
+            </summary>
+        </member>
+        <member name="F:CL_Generales.frmReporte.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:CL_Generales.frmReporte.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:CL_Generales.frmReporte.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="F:CL_Generales.frmSeleccionarEmpresa.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:CL_Generales.frmSeleccionarEmpresa.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:CL_Generales.frmSeleccionarEmpresa.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="F:CL_Generales.frmSesion.bUsuarioValido">
+            <summary>
+            Variable bValido
+            </summary>
+        </member>
+        <member name="F:CL_Generales.frmSesion.sNumUsuario">
+            <summary>
+            Variable sUsuario
+            </summary>
+        </member>
+        <member name="F:CL_Generales.frmSesion.sMensaje">
+            <summary>
+            Variable sMensaje
+            </summary>
+        </member>
+        <member name="F:CL_Generales.frmSesion.sTipoUsuario">
+            <summary>
+            Variable sTipoUsuario
+            </summary>
+        </member>
+        <member name="F:CL_Generales.frmSesion.sSesionSistemas">
+            <summary>
+            Variable sSesionSistemas
+            </summary>
+        </member>
+        <member name="M:CL_Generales.frmSesion.#ctor">
+            <summary>
+            Formulario frmSesion
+            </summary>
+        </member>
+        <member name="M:CL_Generales.frmSesion.#ctor(System.Boolean)">
+            <summary>
+            Formulario frmSesion
+            </summary>
+            <param name="sSesion">Tipo usuarios sistemas</param>
+        </member>
+        <member name="M:CL_Generales.frmSesion.ValidarSesion">
+            <summary>
+            Método para validar el inicio de sesión
+            </summary>
+        </member>
+        <member name="F:CL_Generales.frmSesion.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:CL_Generales.frmSesion.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:CL_Generales.frmSesion.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="M:CL_Generales.Program.Main">
+            ULTIMA MODIFICACION 
+            Por: Jesus Reyes  Al dia: 15-Feb-2020 10:08 AM
+            Clase: CL_RnCatalogos METODO: spc03_combustibleRendimiento 
+            Se modificaron los parametros fecha inicia y fecha final
+            MODIFICACION ANTERIOR
+            Guadalupe Pérez -> 10 02 2020 10:15
+            Se agregó un metodo nuevo en [CL_RnCatalogos]
+            ObtenerDatosDeBusqueda(ref DataTable oDs, short piSemana, short piDias)
+            
+            Se agregó un metodo nuevo en [CL_Datos]
+            EjecutarConsulta(ref DataTable p_objDt, string p_sConsulta)
+            --------------------------------------------------------------------------
+            <summary>
+            The main entry point for the application.
+            </summary>
+        </member>
+        <member name="T:CL_Generales.Properties.Resources">
+            <summary>
+              A strongly-typed resource class, for looking up localized strings, etc.
+            </summary>
+        </member>
+        <member name="P:CL_Generales.Properties.Resources.ResourceManager">
+            <summary>
+              Returns the cached ResourceManager instance used by this class.
+            </summary>
+        </member>
+        <member name="P:CL_Generales.Properties.Resources.Culture">
+            <summary>
+              Overrides the current thread's CurrentUICulture property for all
+              resource lookups using this strongly typed resource class.
+            </summary>
+        </member>
+    </members>
+</doc>
